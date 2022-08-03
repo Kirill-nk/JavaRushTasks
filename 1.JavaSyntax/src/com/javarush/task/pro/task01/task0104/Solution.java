@@ -13,5 +13,6 @@ public class Solution {
         System.out.println("убираем листья");
     //    System.out.println("убираем птиц");
         System.out.println("уборка города закончилась");
+        System.out.println("уборка города продолжилась и будет идти постоянно");
     }
 }
