@@ -13,11 +13,16 @@ public class Solution {
         String scan = "сканируем канал, ";
         String remove = "очищаем вирусы и баги.";
 
-        System.out.println(remove);
-        System.out.print(scan);
-        System.out.print(system);
-        System.out.print(soft);
-        System.out.print(utils);
         System.out.print(integrate);
+        System.out.print(utils);
+        System.out.print(soft);
+        System.out.print(system);
+        System.out.print(scan);
+        System.out.println(remove);
+
+
+
+
+
     }
 }
