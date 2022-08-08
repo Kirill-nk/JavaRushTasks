@@ -21,6 +21,7 @@ public class Solution {
         System.out.println(remove);
         System.out.println(remove);
         System.out.println(remove);
+        System.out.println(system);
 
 
 
