@@ -19,9 +19,8 @@ public class Solution {
         System.out.print(system);
         System.out.print(scan);
         System.out.println(remove);
-        System.out.println(remove);
-        System.out.println(remove);
         System.out.println(system);
+        System.out.println("It’s blue side");
 
 
 
