@@ -9,6 +9,10 @@ public class Solution {
         jedi2.name = "Anakin";
         jedi3.name = "Joda";
 
+        System.out.println("Amigo");
+        System.out.print("The");
+        System.out.println("Best");
+
     }
 
     public static class Jedi {
