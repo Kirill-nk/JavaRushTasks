@@ -12,7 +12,6 @@ public class Solution {
         Clone clone7 = new Clone();
         Clone clone8;
         Clone clone9;
-        Clone clone10;
     }
     public static class Clone {
 
