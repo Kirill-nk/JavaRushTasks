@@ -6,6 +6,5 @@ public class Solution {
     }
     public static double getWeight(int weight) {
         return (weight * 0.17);
-
     }
 }
