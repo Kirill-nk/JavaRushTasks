@@ -1,0 +1,17 @@
+Напишите метод public static void increaseSpeed(int a), который будет принимать значение скорости n,  увеличивать ее  на 100 и выведите на экран надпись:
+"Your speed is: <n+100> km/h."
+Где <n+100> - это скорость увеличенная на 100.
+
+public class Solution {
+    public static void main(String[] args) {
+        increaseSpeed(700);
+    }
+    //напишите тут ваш код
+}
+
+Программа должна выводить текст на экран.
+Метод main не должен вызывать System.out.println или System.out.print напрямую.
+Метод increaseSpeed не должен возвращать результат.
+Метод main должен вызвать метод increaseSpeed только один раз.
+Метод increaseSpeed должен увеличить переданное число на 100
+и вывести на экран надпись согласно шаблону.
