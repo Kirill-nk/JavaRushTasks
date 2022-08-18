@@ -2,15 +2,15 @@ package com.javarush.task.task01.sb2p2p1;
 
 public class Solution {
     public static void main(String[] args) {
-        Owner owner_1 = new Owner();
-        Pet pet_1 = new Pet();
+        Owner owner1 = new Owner();
+        Pet pet1 = new Pet();
 
-        owner_1.name = "Mike";
-        pet_1.kind = "cat";
-        pet_1.color = "black";
+        owner1.name = "Mike";
+        pet1.kind = "cat";
+        pet1.color = "black";
 
-        owner_1.pet = pet_1;
-        owner_1.say();
+        owner1.pet = pet1;
+        owner1.say();
     }
     static class Owner{
         String name;
