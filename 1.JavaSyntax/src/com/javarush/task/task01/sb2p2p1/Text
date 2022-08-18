@@ -1,11 +1,17 @@
 Попробуйте и вы изучить новые приемы,
 чтобы вы могли отличать светлую сторону от темной.
-Изучите новый прием:
 
+Изучите новый прием:
 InputStream inputStream = System.in;
 Reader inputStreamReader = new InputStreamReader(inputStream);
 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 String name = bufferedReader.readLine();
+
+Справочная информация
+Ранее мы упомянули о том, что String - класс, хотя, когда мы вводим строковую переменную a = "some text", объявляем ее, как тип String. Все просто. На самом деле существуют простые(примитивные) и сложные типы. Сложные типы могут состоять из примитивных или/и менее сложных типов. Сложные типы мы называем классами. Сложный тип String, он же класс, хранит данные в виде таблицы символов (char).
+В связи с тем, что сложные типы могут содержать очень много информации, то переменные сложных типов хранят не сам объект, а ссылку на него.
+Говоря о ссылках, стоит уточнить про еще одну конструкцию.
+Давайте вспомним пример:
 
 public class Solution {
     public static void main(String[] args) {
@@ -32,3 +38,121 @@ public class Solution {
          String color;
     }
 }
+
+Выражение new Onwer() выделяет память для объекта Owner посредством оператора new.
+Owner() - конструктор без параметров. В выделеном участке памяти будут
+храниться все данные объекта Owner. Переменная owner_1 получает ссылку
+на созданный объект. По умолчанию все данные типа String будут иметь значение null,
+ а данные типа int равны 0. Но мы можем прописать конструктор внутри класса
+ и с помощью него задавать стандартные значения:
+
+ public class Solution {
+     public static void main(String[] args) {
+       Owner owner_1 = new Owner();
+         owner_1.say();
+     }
+     static class Owner{
+         String name;
+         String kind;
+         String color;
+
+         Owner(){
+             name = "Mike";
+             kind = "cat";
+             color = "black";
+         }
+
+         void say(){
+             System.out.println("Hello, my name is " + name + " and my " + kind + " is " + color);
+         }
+     }
+ }
+ Конструкторы могут принимать аргументы, если заранее это прописать и тогда
+ при вызове конструкторов можно изменять данные:
+ public class Solution {
+     public static void main(String[] args) {
+         Owner owner_1 = new Owner("Mike", "cat", "black");
+         owner_1.say();
+     }
+     static class Owner{
+         String name;
+         String kind;
+         String color;
+
+         Owner(String n, String k, String c){
+             name = n;
+             kind = k;
+             color = c;
+         }
+         void say(){
+             System.out.println("Hello, my name is " + name + " and my " + kind + " is " + color);
+         }
+     }
+ }
+
+ Давайте сделаем так, чтобы метод say() возвращал данные,
+ а вывод сообщения осуществлялся внутри main метода.
+ Для этого необходимо воспользоваться оператором return:
+ public class Solution {
+     public static void main(String[] args) {
+         Owner owner_1 = new Owner("Mike", "cat", "black");
+         System.out.println(owner_1.say());
+     }
+     static class Owner{
+         String name;
+         String kind;
+         String color;
+
+         Owner(String n, String k, String c){
+             name = n;
+             kind = k;
+             color = c;
+         }
+     String say(){
+         return "Hello, my name is " + name + " and my " + kind + " is " + color;
+     }
+   }
+ }
+
+ Обратите внимание на то, что метод say стал String, поскольку нам необходимо,
+ чтобы он вернул текст. Если бы мы оставили void, то и данные возвращались
+ типа void. Это особый тип, который означает "нет значения". То есть,
+ если вы хотите, чтобы ваш метод ничего не возвращал - он должен
+ объявляться типом void. В противном случае, вы должны выбрать тот тип,
+ данные которого хотите получить.
+  В первом задании данного Эпизода мы хотим показать возможность ручного
+  ввода информации для программы. Представьте, что перед тем, как наша
+  программа должна выполнить свои операции, она должна получить
+  начальные параметры. Эти параметры мы можем менять внутри кода,
+  но это означает постоянное изменение файла. А что, если сделать так,
+  чтобы не меняя файл с кодом, можно было вводить разные данные и
+  программа выводила то, что нам нужно?
+
+  InputStream inputStream = System.in;
+  Reader inputStreamReader = new InputStreamReader(inputStream);
+  BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+  String name = bufferedReader.readLine();
+
+  InputStream - это базовый абстрактный класс, который определяет входной
+  поток информации. System это класс, который обеспечивает взаимодействие
+  с консолью (ввод-вывод). Объект in отвечает за создание потока ввода.
+  Кстати, в классе System есть объект out, который отвечает за поток
+  вывода (System.out.println()). Соответственно первой строкой мы
+  связываем переменную inputStream типа InputStream c созданным потоком
+  ввода информации. То, что вы введете с клавиатуры, попадет в переменную
+  inputStream.
+  В чистом виде информация в inputStream будет представлять из себя байты,
+  но работать с ними не очень удобно и мы хотим получить информацию в виде
+  тех же символов, которые вводили с клавиатуры. Для этого необходимо данную
+  информацию перевести. Воспользуемся конструктором InputStreamReader из
+  класса Reader, чтобы перевести информацию в inputStream и занести ее в
+  inputStreamReader.
+  Теперь у нас есть символьный поток ввода. Воспользуемся конструктором
+  BufferedReader() для увеличения производительности чтения данных из потока.
+  В конечном итоге, мы построчно считываем информацию из потока с помощью
+  метода readLine() класса BufferedReader и заносим ее в переменную name.
+  Для того, чтобы мы могли пользоваться данными классами,
+  нам необходимо их подключить из модуля io. Модуль это файл с набором
+  классов и методов, объединенных определенным функционалом.
+  Подключение модуля к вашей программе осуществляется командой import java.io.*:
