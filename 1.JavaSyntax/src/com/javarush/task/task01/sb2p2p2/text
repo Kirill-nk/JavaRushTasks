@@ -1,0 +1,18 @@
+Изучите еще один прием:
+
+Scanner scanner = new Scanner(System.in);
+String name = scanner.nextLine();
+int age = scanner.nextInt();
+
+Подсказка
+Класс Scanner из модуля java.util позволяет упростить работу с System.in:
+import java.util.*;
+
+public class Text_out {
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        int digit = scanner.nextInt();
+
+        System.out.println(digit);
+           }
+}
