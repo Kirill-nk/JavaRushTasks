@@ -1,0 +1,15 @@
+Вывести на экран строку «We need help!»
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+    }
+}
+
+Требования:
+Программа должна выводить текст.
+Программа должна считывать данные с клавиатуры.
+Выведенный текст должен полностью соответствовать заданию.
