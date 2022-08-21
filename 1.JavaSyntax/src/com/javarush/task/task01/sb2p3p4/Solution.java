@@ -7,7 +7,8 @@ public class Solution {
     Scanner scanner = new Scanner(System.in);
     InputStream inputStream = System.in;
     Reader inputStreamReader = new InputStreamReader(inputStream);
-    String name = "is a header of the Senate";
+    String n = "is a header of the Senate";
+    String name = inputStream;
     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
     String name = bufferedReader.readLine();
 }
