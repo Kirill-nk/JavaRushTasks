@@ -9,5 +9,6 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         int joda = scanner.nextInt();
         System.out.println(jedis - joda);
+
     }
 }
