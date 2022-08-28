@@ -1,0 +1,20 @@
+Напишите программу, которая принимает с клавиатуры два позывных, если это имена Anakin и Obi-Wan,
+программа должна вывести фразу " "name1" and "name2" - friends".
+Если хотя бы одно из имен другое, тогда :" "name1" - friend, "name2" - foe", в зависимости от того,
+какое из имен было введено первым.
+Если оба имени другие, тогда :" "name1" and "name2" - foes"
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+    }
+}
+
+Программа должна считывать две строки c клавиатуры;
+Программа должна содержать System.out.println() или System.out.print();
+Если имена одинаковые вывести сообщение " "name1" and "name2" - friends";
+Если одно имя совпадает, а второе нет - вывести сообщение " "name1" - friend, "name2" - foe";
+Если имена разные - вывести сообщение " "name1" and "name2" - foes".
