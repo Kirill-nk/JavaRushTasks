@@ -13,7 +13,7 @@ public class Solution {
             System.out.println("it’s Dark side");
         else if (chi > 0)
             System.out.println("it’s Light side");
-        else
+        else if (chi == 0)
             System.out.println("it’s balance");
 
     }
