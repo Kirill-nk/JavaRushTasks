@@ -1,0 +1,13 @@
+Напишите программу, которая принимает с клавиатуры два числа m и n.
+
+Используя цикл for вывести на экран прямоугольник размером m на n из звездочек.
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        //напишите тут ваш код
+    }
+}
+
