@@ -1,0 +1,7 @@
+Напишите программу, которая выводит на экран таблицу умножения 9х9 используя цикл while.
+
+public class Solution {
+    public static void main(String[] args) {
+        //напишите тут ваш код
+    }
+}
