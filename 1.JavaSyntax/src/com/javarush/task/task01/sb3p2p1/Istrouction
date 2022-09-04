@@ -1,0 +1,153 @@
+Ранее мы познакомились с классами, созданием объектов, со способами получения информации из класса.
+Теперь давайте подумаем: а правильно ли, что наши данные всегда можно получить из какого-либо класса?
+Например, у нас есть следующий класс:
+public class Human{
+    public int age;
+    public String name;
+
+    public Human(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+}
+
+(Ключевое слово this позволяет связать переменную name класса Human
+со значением параметра конструктора Human, когда имена переменных совпадают.)
+Модификатор public у класса говорит о том, что данный класс является общедоступным.
+Тот же модификатор у переменных и методов этого класса говорит о том,
+что другие классы из текущего модуля или какого любого другого модуля могут быть вызваны.
+Представим, что мы используем данный класс для создания объектов-пользователей
+с минимальной информацией о них - имени и возрасте. Далее наша программа
+работает с этими данными по определенной логике. В какой-то из моментов наша
+программа получает данные такого рода, которые не предусмотренны логикой
+и ломают нашу программу (например отрицательный возраст или имя из цифр). Что делать дальше?
+
+Ну допустим можно пересмотреть логику программы и доработать пару условий на случай некорректных
+данных, но, если логика программы сложная, то на это можно потратить много времени.
+Есть второй вариант - прописать класс так, чтобы он мог выдавать ислючительно чистые
+данные для нашей программы. Для этого используют специальные методы - геттеры и сеттеры.
+В идеале они должны быть написаны всегда. Давайте попробуем, для начала
+ограничим доступ к переменным нашего класса, сделаем это через модификатор private:
+
+public class Program{
+    public static void main(String[] args) {
+        Human user = new Human("Mike", 32);
+
+        System.out.println(user.age);   // ! Ошибка, модификатор private
+        System.out.println(user.name);   // ! Ошибка, модификатор private
+    }
+}
+class Human{
+    private int age;
+    private String name;
+
+    public Human(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+}
+
+Теперь, если мы попробуем обратиться к данным класса, то получим ошибку,
+т.к. в доступе будет отказано. Добавим метод-геттер, с помощью которого
+сможем доставать нужную нам информацию:
+public class Program{
+    public static void main(String[] args) {
+        Human user = new Human("Mike", 32);
+
+        System.out.println(user.getAge());   // Теперь ошибки не будет и данные будут получены
+        System.out.println(user.getName());
+    }
+}
+class Human{
+    private int age;
+    private String name;
+
+    public Human(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+    public int getAge(){
+        return this.age;
+    }
+}
+
+Метод геттер так называется, потому что он начинася со слова get - получать,
+аналогично с сеттерами. Добавим сеттер, чтобы могли вносить изменения данных:
+public class Program{
+    public static void main(String[] args) {
+        Human user = new Human("Mike", 32);
+
+        user.setAge(150);
+        System.out.println(user.getAge());
+        System.out.println(user.getName());
+    }
+}
+class Human{
+    private int age;
+    private String name;
+
+    public Human(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+    public int getAge(){
+        return this.age;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setAge(int age){
+        this.age = age;
+    }
+}
+
+Теперь мы можем изменять данные только через сеттер, но какой в этом всем смысл?
+Смысл в том, что сеттер и геттер это методы, а значит они могут содержать в себе
+дополнительные инструкции, которые будут выполняться при их вызове. Мы можем прописать,
+что возраст пользователя не может быть меньше 18 и больше 115 лет:
+public class Program{
+    public static void main(String[] args) {
+        Human user = new Human("Mike", 32);
+
+        user.setAge(150);
+        System.out.println(user.getAge());
+        System.out.println(user.getName());
+    }
+}
+class Human{
+    private int age;
+    private String name;
+
+    public Human(String name, int age){
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+    public int getAge(){
+        return this.age;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setAge(int age){
+        if (age >=18 && age <= 115)
+            this.age = age;
+    }
+}
+
+Теперь при попытке поменять возраст с 32 на 150 ничего не изменится,
+возраст так и останется на значении 32. Но если поставить 20, то сеттер
+отработает как надо. Тем самым мы защитили программу от ввода некорректных данных.
+На этом мы завершим справочную информацию для данного Эпизода.
+До встречи в следующем Эпизоде!
