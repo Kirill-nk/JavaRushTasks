@@ -4,25 +4,23 @@ public class Sith {
     private String name;
     private int age;
 
-    public Human(String name, int age) {
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public void setAge(int age) {
         this.age = age;
+    }
 
-        public static void main (String[]args) throws Exception {
-            Human user = new Human("Mike", 32);
+    public static void main(String[] args) {
 
-            String name = user.getName();
-            int age = user.getAge();
-
-            System.out.println(user.name);   // ! Ошибка, модификатор private
-            System.out.println(user.age);   // ! Ошибка, модификатор private
-        }
-
-        static class Human {
-            private String name;
-            private int age;
-
-
-        }
     }
 }
