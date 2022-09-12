@@ -1,12 +1,5 @@
 package Study_online;
 
-public class Student {
-    String name;
-    int age;
-    boolean isMinor;
-    char gender;
-
-
     public class TestStudent {
         public static void main(String[] args) {
             Student student = new Student();
@@ -16,4 +9,3 @@ public class Student {
             System.out.println("пол? " + student.gender);
         }
     }
-}
