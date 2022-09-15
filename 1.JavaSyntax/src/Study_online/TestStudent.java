@@ -1,11 +1,9 @@
 package Study_online;
 
-    public class TestStudent {
-        public static void main(String[] args) {
-            Student student = new Student();
-            System.out.println("имя? " + student.name);
-            System.out.println("возраст? " + student.age);
-            System.out.println("несовершеннолетний? " + student.isMinor);
-            System.out.println("пол? " + student.gender);
-        }
+public class A {
+    boolean x;
+    public static void main(String[] args) {
+        A a = new A();
+        System.out.println(a.x);
     }
+}
