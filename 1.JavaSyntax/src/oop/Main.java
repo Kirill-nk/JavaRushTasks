@@ -8,12 +8,28 @@ public class Main {
 
         dog.setNickname("Muhtar");
         dog.setWeight(30);
-        dog.sayHello();
+//        dog.sayHello();
         cat.setNickname("Barsik");
         cat.setWeight(4);
-        cat.sayHello();
+//        cat.sayHello();
         bear.setNickname("Mihail");
         bear.setWeight(250);
-        bear.sayHello();
+//        bear.sayHello();
+
+
+//        int[] array = new int[5];
+
+//        int[] arr = {1, 5, 8, 7, 9};
+
+        Animal[] animals = {dog, cat, bear};
+
+        animalSay(animals);
+    }
+
+    public static void animalSay(Animal[] animals) {
+        for (int i = 0; i < animals.length; i++) {
+            System.out.println(animals[i].sayHello());
+        }
+
     }
 }
