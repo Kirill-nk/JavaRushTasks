@@ -4,7 +4,7 @@ public abstract class Animal {
     private String nickname;
     private int weight;
 
-    public abstract void sayHello();
+    public abstract String sayHello();
 
     public String getNickname() {
         return nickname;
