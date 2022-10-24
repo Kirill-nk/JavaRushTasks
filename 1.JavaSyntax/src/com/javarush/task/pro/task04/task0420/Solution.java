@@ -16,6 +16,15 @@ public class Solution {
     public static void checkNumber(int number) {
         Scanner scanner = new Scanner(System.in);
         int inputNumber;
-        //напишите тут ваш код
+     while (true)
+     {
+         inputNumber = scanner.nextInt();
+         if (inputNumber==number)
+         {
+             System.out.println("Загадочное число равно " + number);
+     break;
+         }
+         System.out.println("Попробуй еще раз");
+     }
     }
 }
