@@ -13,18 +13,16 @@ public class Solution {
         int end = scanner.nextInt();
         int multiple = scanner.nextInt();
 
-        if (start > end)
-            System.out.println("end должен быть больше start");
-        else if (start <= end) {
 
-            int sum = 0;
-            int count = 0;
-            for (int a = start; a < end; a++) {
-                if ((a % multiple) != 0) continue;
-                sum = count + a;
+        int sum = 0;
+        for (int i = start; i < end; i++) {
+            if (i % multiple != 0) {
+                continue;
             }
+            sum = sum + i;
 
-            System.out.println(sum);
         }
+        System.out.println(sum);
+
     }
 }
