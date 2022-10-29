@@ -6,19 +6,18 @@ package com.javarush.task.pro.task04.task0407;
 
 public class Solution {
     public static void main(String[] args) {
-        int a = 1;
+
+        int i = 1;
         int sum = 0;
 
-        while (a < 100) {
-            a++;
-            if ((a % 3) == 0)
-            {
+        while (i <= 100) {
+            if (i % 3 == 0) {
+                i++;
                 continue;
-        }
-        sum = sum + a;
-
+            }
+            sum = sum+
+            i++;
         }
         System.out.println(sum);
     }
-
 }
