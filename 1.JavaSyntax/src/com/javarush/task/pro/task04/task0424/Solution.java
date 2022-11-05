@@ -9,15 +9,14 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         Scanner bombInterface = new Scanner(System.in);
-        int num = bombInterface.nextInt();
+        int i;
+
         do {
-            if () {
-                i
-            }
-
-        }
+            i = bombInterface.nextInt();
+            System.out.println(i);
 
 
-        System.out.println(num);
+        } while (i % 10 != 0);
     }
 }
+
