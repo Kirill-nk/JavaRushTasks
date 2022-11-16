@@ -10,6 +10,10 @@ public class Solution {
     public static int[] resultArray;
 
     public static void main(String[] args) {
+        int firstLength = firstArray.length;
+        int secondLength = secondArray.length;
+        int resultLength = firstLength + secondLength;
+        resultArray = new int[resultLength];
 
 
         for (int i = 0; i < resultArray.length; i++) {
