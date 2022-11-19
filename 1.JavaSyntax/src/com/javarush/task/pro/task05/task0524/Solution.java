@@ -9,6 +9,7 @@ public class Solution {
 
     public static void main(String[] args) {
         int[] array = new int[];
+
         for (int i = 0; i < array.length; i++) {
 
             
