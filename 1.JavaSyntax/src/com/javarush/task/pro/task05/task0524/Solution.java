@@ -8,11 +8,13 @@ public class Solution {
     public static int[] coordinates;
 
     public static void main(String[] args) {
-        int[] array = new int[];
+        coordinates = new int[200];
+        for (int i = 0; i < coordinates.length / 2; i++) {
+            coordinates[i * 2] = i * 10;
+            coordinates[i * 2 + 1] = i * 10 + 1;
 
-        for (int i = 0; i < array.length; i++) {
-
-            
+            System.out.print(coordinates[i] + " ");
         }
+
     }
 }
