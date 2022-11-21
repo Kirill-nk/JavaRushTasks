@@ -10,14 +10,19 @@ public class Solution {
     public static int[] resultArray;
 
     public static void main(String[] args) {
-        int firstLength = firstArray.length;
-        int secondLength = secondArray.length;
-        int resultLength = firstLength + secondLength;
-        resultArray = new int[resultLength];
-
-
+        resultArray = new int[firstArray.length + secondArray.length];
+        int count = 0;
         for (int i = 0; i < resultArray.length; i++) {
-            System.out.print(resultArray[i] + ", ");
+            resultArray[i] = firstArray[i];
+            count++;
+
         }
+        for (int j = 0; j < resultArray.length; j++) {
+
+            resultArray
+            System.out.print(resultArray[j] + ", ");
+        }
+
     }
+
 }
