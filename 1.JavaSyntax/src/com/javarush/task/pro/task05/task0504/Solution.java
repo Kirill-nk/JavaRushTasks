@@ -12,15 +12,15 @@ public class Solution {
     public static void main(String[] args) {
         resultArray = new int[firstArray.length + secondArray.length];
         int count = 0;
-        for (int i = 0; i < resultArray.length; i++) {
+        for (int i = 0; i < firstArray.length; i++) {
             resultArray[i] = firstArray[i];
             count++;
-
         }
-        for (int j = 0; j < resultArray.length; j++) {
-
-            resultArray
-            System.out.print(resultArray[j] + ", ");
+        for (int j = 0; j < secondArray.length; j++) {
+            resultArray[count++] = secondArray[j];
+        }
+        for (int i = 0; i < resultArray.length; i++) {
+            System.out.print(resultArray[i] + ", ");
         }
 
     }
