@@ -9,10 +9,11 @@ Reverse
 public class Solution {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int[] array = new int[10];
+        for (int i = 0; i < 10; i++) {
+            array[i] = i;
+        }
 
-
-        int[] n = new int[i];
-
-
+        System.out.println(a);
     }
 }
