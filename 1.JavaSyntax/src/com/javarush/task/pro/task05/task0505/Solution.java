@@ -14,6 +14,6 @@ public class Solution {
             array[i] = i;
         }
 
-        System.out.println(a);
+        System.out.println(array);
     }
 }
