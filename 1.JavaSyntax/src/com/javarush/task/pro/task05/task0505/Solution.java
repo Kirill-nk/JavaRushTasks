@@ -22,6 +22,7 @@ public class Solution {
             }
         } else {
             for (int i = number - 1; i >= 0; i--) {
+
                 System.out.print(array[i] + " ");
             }
         }
