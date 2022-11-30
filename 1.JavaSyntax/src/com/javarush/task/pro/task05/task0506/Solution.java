@@ -14,6 +14,9 @@ public class Solution {
         int n = consol.nextInt();
 //        int[] array = new int[n];
 
+        if (n<0)
+            n=-n;
+        array = new int[n];
         for (int i = 0; i < n; i++) {
             array[i] = consol.nextInt();
         }
