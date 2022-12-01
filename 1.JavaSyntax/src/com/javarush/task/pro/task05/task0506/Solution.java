@@ -12,7 +12,6 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         Scanner consol = new Scanner(System.in);
         int n = consol.nextInt();
-//        int[] array = new int[n];
 
         if (n<0)
             n=-n;
