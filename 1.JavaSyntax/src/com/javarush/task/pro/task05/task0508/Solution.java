@@ -16,13 +16,15 @@ public class Solution {
         for (int i = 0; i < strings.length; i++) {
             strings[i] = console.nextLine();
 
-        }
-        String rep = 0;
-        for (int i = 5; i >= 0; i--)
-        {
-            if (strings[i] == rep)
-                rep = null;
 
+            String rep = 0;
+            for (int j = i + 1; j < strings.length; j++) {
+if ()
+            }
+            {
+                if (strings[i] == rep)
+                    rep = null;
+            }
             System.out.print(strings[i] + ", ");
         }
     }
