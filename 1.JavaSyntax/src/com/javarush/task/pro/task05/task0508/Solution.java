@@ -13,19 +13,15 @@ public class Solution {
         Scanner console = new Scanner(System.in);
 
         strings = new String[6];
-        for (int i = 0; i < strings.length; i++) {
+        for (int i = 0; i < 6; i++) {
             strings[i] = console.nextLine();
 
 
-            String rep = 0;
-            for (int j = i + 1; j < strings.length; j++) {
-if ()
-            }
+        }
+        for (int i = 0; i < 6; i++) {
             {
-                if (strings[i] == rep)
-                    rep = null;
+                System.out.print(strings[i] + ", ");
             }
-            System.out.print(strings[i] + ", ");
         }
     }
 }
