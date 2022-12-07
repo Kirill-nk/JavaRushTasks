@@ -16,11 +16,10 @@ public class Solution {
         for (int i = 0; i < 6; i++) {
             strings[i] = console.nextLine();
 
-            strings [i] = null;
-            for (int j = 0; j < 6; j++) {
-                {
-                    if (strings[i] == strings[j]) {
-                    else strings[i] == null;
+            boolean b = false;
+            for (int i = 0; i < 6; i++) {
+                if (strings[i] != null) {
+                else strings[i] = null;
                     }
                     System.out.print(strings[j] + ", ");
                 }
