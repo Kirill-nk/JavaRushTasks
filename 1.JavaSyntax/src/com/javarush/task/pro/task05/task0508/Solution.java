@@ -13,7 +13,7 @@ public class Solution {
         Scanner console = new Scanner(System.in);
 
         strings[] = new String();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < strings.length; i++) {
             strings[i] = console.nextLine();
 
             System.out.print(strings[i] + ", ");
