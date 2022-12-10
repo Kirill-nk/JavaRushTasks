@@ -12,12 +12,27 @@ public class Solution {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
 
-        strings[] = new String();
+        strings = new String[6];
         for (int i = 0; i < strings.length; i++) {
             strings[i] = console.nextLine();
+        }
+        for (int i = 0; i < strings.length - 1; i++) {
+            String str = strings[i];
+            for (int j = i + 1; j < strings.length; j++) {
 
-            System.out.print(strings[i] + ", ");
+                if (str == null) {
+                    break;
+                }
+                if (str.equals(strings[j])) {
+                    strings[i] = null;
+                    strings[j] = null;
+                }
+            }
         }
 
+
+        for (int i = 0; i < strings.length; i++) {
+            System.out.print(strings[i] + ", ");
+        }
     }
 }
