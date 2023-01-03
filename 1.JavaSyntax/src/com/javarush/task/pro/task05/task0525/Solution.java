@@ -8,14 +8,7 @@ public class Solution {
     public static String[] array;
 
     public static void main(String[] args) {
-        array = new String[6];
-
-        array[0] = "Amigo";
-        array[1] = "Diego";
-        array[2] = "Amigo";
-        array[3] = "Diego";
-        array[4] = "Amigo";
-        array[5] = "Diego";
+        array = new String[] {"Amigo","robotank","Amigo","Diego","Amigo","Diego"};
 
         boolean isMissionComplete = false;
         for (int i = 0; i < array.length; i++) {
