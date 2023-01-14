@@ -15,9 +15,19 @@ public class BattleField {
     public static void main(String[] args) {
         GalavirXIII galavirXIII = new GalavirXIII();
         Nimrod nimrod = new Nimrod();
-        System.out.println(galavirAttack);
+
+        do {
+            System.out.println(galavirAttack);
+            int attackGalavir = galavirXIII.attack();
+            nimrod.defend(attackGalavir);
+            System.out.println("Nimrod health = " + nimrod.health);
+        }
+        while (isNimrodAlive(nimrod));
+
+
     }
-/*    public static boolean isNimrodAlive(Nimrod nimrod) {
+
+    public static boolean isNimrodAlive(Nimrod nimrod) {
         if (nimrod.health > 0) {
             System.out.println(nimrodDefence);
             return true;
@@ -36,5 +46,4 @@ public class BattleField {
             return false;
         }
     }
- */
 }
