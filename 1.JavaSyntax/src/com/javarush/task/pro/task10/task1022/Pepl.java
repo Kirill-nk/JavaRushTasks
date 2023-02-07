@@ -20,8 +20,12 @@ public class Pepl {
     }
 
     public static void distributeBatteries(Robot[] robots) {
-        for (Robot robot : robots) {
-            robot.replaceBattery(batteryWarehouse[null]);
+        int counter = 0;
+        for (int i = 0; i < robots.length; i++) {
+            do {
+                robots[i].replaceBattery(batteryWarehouse[counter]);
+                counter++;
+            } while (robots[i].getCharge() < 20);
         }
     }
 }
