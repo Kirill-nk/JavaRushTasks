@@ -7,21 +7,27 @@ package com.javarush.task.pro.task10.task1004;
 public class CarConcern {
     private final String manufacturer = "Lamborghini";
     private final String model;
-    private final int year = 4321;
-    private final String color = "orange";
+    private final int year;
+    private final String color;
 
     public CarConcern(String model, int year, String color) {
         this.model = model;
-        year = year;
-        color = color;
+        this.year = year;
+        this.color = color;
     }
 
     public CarConcern(String model, int year) {
         this.model = model;
-        year = year;
+        this.year = year;
+        color = "Оранжевый";
+
     }
 
     public CarConcern(String model) {
         this.model = model;
+        year = 4321;
+        color = "Оранжевый";
     }
+
 }
+
