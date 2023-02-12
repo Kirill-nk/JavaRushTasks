@@ -8,10 +8,10 @@ public class Solution {
 
     public static void main(String[] args) {
         Planet earth = new Planet();
-        Planet.name = "Земля";
-        Planet.age = 4_540_000_000L;
-        Planet.speed = 170_218;
-        Planet.area = 510_072_000;
+        earth.name = "Земля";
+        earth.age = 4_540_000_000L;
+        earth.speed = 170_218;
+        earth.area = 510_072_000;
         earth.printInformation();
     }
 }
