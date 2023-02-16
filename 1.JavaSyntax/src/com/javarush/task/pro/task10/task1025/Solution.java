@@ -8,6 +8,9 @@ public class Solution {
 
     public static void main(String[] args) {
         Repeater repeater = new Repeater();
+        if (frequency < 100){
+            frequency = frequency * 100;
+        }
 
     }
 }
