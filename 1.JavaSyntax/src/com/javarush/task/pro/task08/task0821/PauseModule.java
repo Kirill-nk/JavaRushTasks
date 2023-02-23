@@ -15,10 +15,13 @@ public class PauseModule {
     }
 
     public static void pause(long timeUnits) throws InterruptedException {
-        if (timeUnits <= Integer.MAX_VALUE) {
-            Thread.sleep(0, (int) timeUnits);
-        } else {
-            Thread.sleep(timeUnits);
+        if (timeUnits < 0) {
+            timeUnits = timeUnits * (-1);
         }
+        if (timeUnits > 999_999)
+            while (timeUnits > 999999)
+                timeUnits = timeUnits / 10;
+
+        Thread.sleep(0, (int) timeUnits);
     }
 }
