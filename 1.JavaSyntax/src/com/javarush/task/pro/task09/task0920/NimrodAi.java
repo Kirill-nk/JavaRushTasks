@@ -17,7 +17,7 @@ public class NimrodAi {
     public static String[] medRoom = {"bed", "bed", "bed", "bed", "SCAN-MO-TRON-2000", "liquid analyser"};
     public static String[] armoury = {"cannon launcher", "chair"};
     public static String[] securityRoom = {"rack", "rack", "table"};
-    public static String[] reactor = {};
+    public static String[] reactor = {"reactor"};
     public static String[] telecom = {"computer", "computer", "computer", "table", "chair"};
     public static String[] warehouse = {
             "container", "container", "container",
@@ -27,9 +27,14 @@ public class NimrodAi {
     public static String[] powerRoom = {"power lamp", "power lamp", "power lamp", "power lamp", "power lamp", "power lamp", "power lamp"};
 
     public static void main(String[] args) {
-        //напишите тут ваш код
+        String[] roomName = {"diningRoom", "o2", "medRoom", "armoury", "securityRoom", "reactor",
+                "telecom", "warehouse", "controlRoom", "powerRoom"};
 
-        checkPirates("securityRoom");
+        for (String room : roomName) {
+            if(checkPirates(room)){
+                openFloodgates(room);
+            }
+        }
     }
 
     public static boolean checkPirates(String roomName) {
@@ -41,8 +46,15 @@ public class NimrodAi {
         String[] scanResult = RoomScanner.scanRoom(roomName);
         System.out.printf("В %s обнаружено: %s\n", roomName, Arrays.toString(scanResult));
 
-        //напишите тут ваш код
-
+        if (scanResult.length > room.length) {
+            return true;
+        }
+        Arrays.sort(room);
+        for (String item : scanResult) {
+            if (Arrays.binarySearch(room, item) < 0) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -52,8 +64,26 @@ public class NimrodAi {
     }
 
     public static String[] getRoomByName(String roomName) {
-        //напишите тут ваш код
-
-        return null;
+        if (roomName.equals("diningRoom")) {
+            return diningRoom;
+        } else if (roomName.equals("o2")) {
+            return o2;
+        } else if (roomName.equals("medRoom")) {
+            return medRoom;
+        } else if (roomName.equals("armoury")) {
+            return armoury;
+        } else if (roomName.equals("securityRoom")) {
+            return securityRoom;
+        } else if (roomName.equals("reactor")) {
+            return reactor;
+        } else if (roomName.equals("telecom")) {
+            return telecom;
+        } else if (roomName.equals("warehouse")) {
+            return warehouse;
+        } else if (roomName.equals("controlRoom")) {
+            return controlRoom;
+        } else if (roomName.equals("powerRoom")) {
+            return powerRoom;
+        } else return null;
     }
 }
