@@ -18,7 +18,11 @@ public class Solution {
     public static void main(String[] args) {
         for (int i = 0; i < height; i++) {
             Arrays.fill(field[i], empty);
+            int x = (int) (Math.random() * width);
             for (int j = 0; j < width; j++) {
+                if (j==x) {
+                    field[i][j] = robotank;
+                }
                 System.out.print(field[i][j]);
             }
             System.out.println();
