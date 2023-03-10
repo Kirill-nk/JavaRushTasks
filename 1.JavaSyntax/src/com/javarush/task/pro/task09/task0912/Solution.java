@@ -19,7 +19,7 @@ public class Solution {
     }
 
     public static String checkProtocol(String url) {
-
+        if(url.startsWith("http") || url.startsWith("https"))
         return "неизвестный";
     }
 
