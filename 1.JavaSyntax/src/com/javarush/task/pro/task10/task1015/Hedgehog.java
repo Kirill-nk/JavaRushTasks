@@ -12,8 +12,8 @@ public class Hedgehog {
 
     public static void main(String[] args) {
         Hedgehog hedgehog = new Hedgehog ();
-        hedgehog.eat = "apple";
-
+        Apple apple = new Apple();
+        hedgehog.eat(apple);
     }
     public static class Apple {
     }
