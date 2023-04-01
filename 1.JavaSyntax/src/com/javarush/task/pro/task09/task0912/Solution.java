@@ -19,9 +19,9 @@ public class Solution {
     }
 
     public static String checkProtocol(String url) {
-        if (url.startsWith("https")) {
+        if (!url.startsWith("https")) {
             return "https";
-        } else if (url.startsWith("http")) {
+        } else if (!url.startsWith("http")) {
             return "http";
         } else {
             return "неизвестный";
