@@ -21,7 +21,30 @@ public class Solution {
     }
 
     public static void cleanMorals() {
-        //напишите тут ваш код
+        for (int i = 0; i < morals.length; i++) {
+            for (int j = 0; j < morals[i].length; j++) {
+                String morals2 = morals[i][j].toLowerCase();
+                String replaceok;
+                int index = morals2.indexOf("killer");
+                replaceok = "compassion";
+                if (index < 0) {
+                    index = morals2.indexOf("thief");
+                    replaceok = "fairness";
+                }
+                if (index < 0){
+                    index = morals2.indexOf("bully");
+                    replaceok = "respect";
+                }
+                if (index < 0){
+                    continue;
+                }
+
+                morals[i][j] = replaceok;
+
+            }
+        }
+
+
 
     }
 }
