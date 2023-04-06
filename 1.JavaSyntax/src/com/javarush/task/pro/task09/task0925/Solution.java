@@ -17,13 +17,21 @@ public class Solution {
     }
 
     public static void splitArrayElements() {
-        //напишите тут ваш код
+        for (int i = 0; i < controlUnits.length; i++) {
+            StringTokenizer tokenizer = new StringTokenizer(controlUnits[i], "/");
+            while (tokenizer.hasMoreTokens()) {
+                for (int j = 0; j < tokenizer.countTokens(); j++) {
+                    controlUnits[i] = tokenizer.nextToken();
+                }
+            }
+        }
 
     }
 
     public static void getStringFromArray() {
-        //напишите тут ваш код
-
+        for (int i = 0; i < controlUnits.length; ++i) {
+            controlUnits[i] = controlUnits[i].format("\"Block %s back online.\"", controlUnits[i]);
+        }
     }
 
     public static void printArray(String[] array) {
