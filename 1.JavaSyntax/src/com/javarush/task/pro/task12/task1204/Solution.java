@@ -5,7 +5,7 @@ package com.javarush.task.pro.task12.task1204;
 */
 
 public class Solution {
-    public static Integer balance;
+    public static Integer balance = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
         String bill = "1234567890";
@@ -16,6 +16,7 @@ public class Solution {
     }
 
     public static void processPayment(String bill) {
-
+        int triger = Integer.parseInt(bill);
+        balance = balance - triger;
     }
 }

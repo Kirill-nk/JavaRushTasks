@@ -19,18 +19,17 @@ public class Solution {
     public static void splitArrayElements() {
         for (int i = 0; i < controlUnits.length; i++) {
             StringTokenizer tokenizer = new StringTokenizer(controlUnits[i], "/");
-            while (tokenizer.hasMoreTokens()) {
+            while (tokenizer.hasMoreElements()) {
                 for (int j = 0; j < tokenizer.countTokens(); j++) {
                     controlUnits[i] = tokenizer.nextToken();
                 }
             }
         }
-
     }
 
     public static void getStringFromArray() {
         for (int i = 0; i < controlUnits.length; ++i) {
-            controlUnits[i] = controlUnits[i].format("\"Block %s back online.\"", controlUnits[i]);
+            controlUnits[i] = String.format("Block %s back online.", controlUnits[i]);
         }
     }
 
