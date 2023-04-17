@@ -16,22 +16,31 @@ public class Solution {
 
     public static int countDigits(String string) {
         int count = 0;
-
-        return count;
+        for (int i = 0; i < string.length(); i++) {
+            if (Character.isDigit(string.charAt(i))) {
+                count++;
+            }
+            return count;
+        }
     }
 
     public static int countLetters(String string) {
-        return string.length();
-
+        int count = 0;
+        for (int i = 0; i < string.length(); i++) {
+            if (Character.isLetter(string.charAt(i))) {
+                count++;
+            }
+            return count;
+        }
     }
 
     public static int countSpaces(String string) {
-       int spaceCount = 0;
-       for (char c : string.toCharArray())
-           if(c == ' '){
-               spaceCount++;
-           }
-
-        return spaceCount;
+        int count = 0;
+        for (int i = 0; i < string.length(); i++) {
+            if (Character.isSpaceChar(string.charAt(i))) {
+                count++;
+            }
+            return count;
+        }
     }
 }
