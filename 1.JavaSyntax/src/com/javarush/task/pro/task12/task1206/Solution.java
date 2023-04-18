@@ -20,9 +20,12 @@ public class Solution {
             if (Character.isDigit(string.charAt(i))) {
                 count++;
             }
-            return count;
+
         }
+        return count;
     }
+
+
 
     public static int countLetters(String string) {
         int count = 0;
@@ -30,8 +33,9 @@ public class Solution {
             if (Character.isLetter(string.charAt(i))) {
                 count++;
             }
-            return count;
+
         }
+        return count;
     }
 
     public static int countSpaces(String string) {
@@ -40,7 +44,8 @@ public class Solution {
             if (Character.isSpaceChar(string.charAt(i))) {
                 count++;
             }
-            return count;
+
         }
+        return count;
     }
 }
