@@ -25,6 +25,6 @@ public class Solution {
     }
 
     public static void paySalary(String name) {
-
+    }
     }
 }
