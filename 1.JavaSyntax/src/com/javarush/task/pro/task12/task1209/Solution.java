@@ -1,6 +1,7 @@
 package com.javarush.task.pro.task12.task1209;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /* 
 Бухгалтерия
@@ -25,6 +26,6 @@ public class Solution {
     }
 
     public static void paySalary(String name) {
-    }
+        if ();
     }
 }
