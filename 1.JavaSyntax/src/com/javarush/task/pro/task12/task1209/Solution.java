@@ -26,6 +26,12 @@ public class Solution {
     }
 
     public static void paySalary(String name) {
-        if ();
+        for (int i = 0; i < waitingEmployees.size(); i++) {
+            if (waitingEmployees.get(i).equals(name)){
+                alreadyGotSalaryEmployees.add(name);
+                waitingEmployees.set(i,null);
+            }
+
+        }
     }
 }
