@@ -17,7 +17,7 @@ public class Solution {
     }
 
     public static void createNewPlanet(String planetName) {
-        //напишите тут ваш код
+        planets.add(3,planetName);
     }
 
     public static void addPlanets() {
