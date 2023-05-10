@@ -20,7 +20,7 @@ public class Solution {
 
     public static void checkElementsType(ArrayList<Object> elements) {
         for (int i = 0; i < elements.size(); i++) {
-            if (elements[i] instanceof String) {
+            if ( instanceof String) {
                 String s = (String) elements[i];
                 System.out.println(elements);
             }
