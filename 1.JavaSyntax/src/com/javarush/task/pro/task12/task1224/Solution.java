@@ -19,7 +19,16 @@ public class Solution {
     }
 
     public static int[] getConnection(Planet planet) {
-        //напишите тут ваш код
+        Planet.OrbitalStation[] stations = planet.stations;
+        for (int i = 0; i < stations.length; i++) {
+
+            for (int j = 0; j < stations[i].controlSystem.getInterfacesNumber(); j++) {
+                if (stations[i].controlSystem.connect(j) == Boolean.TRUE){
+                    return new int[] {i,j};
+                }
+            }
+        }
+
 
         return null;
     }
