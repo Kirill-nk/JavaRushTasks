@@ -11,6 +11,8 @@ public class Solution {
     public static void printList(ArrayList<String> words) {
         Iterator<String> iterator = words.iterator(); iterator.hasNext();
         for (String word: iterator) {
+
+
             String word = iterator.next();
             System.out.println(word);
         }
