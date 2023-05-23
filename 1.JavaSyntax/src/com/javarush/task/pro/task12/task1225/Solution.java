@@ -16,7 +16,9 @@ public class Solution {
     }
 
     public static void convertAccounts() {
-        //напишите тут ваш код
+        for (int i = 0; i < accountsList.size(); i++) {
+            accountsList.add(Accounts.getAccounts();
+        }
     }
 
     public static void registerAccount(String username) {
