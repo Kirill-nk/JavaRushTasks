@@ -9,7 +9,7 @@ import java.util.*;
 public class Solution {
 
     public static void printList(ArrayList<String> words) {
-        Iterator<String> iterator = words.iterator(); iterator.hasNext();
+        Iterator<String> iterator = words.iterator();
         for (String word: iterator) {
 
 
