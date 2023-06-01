@@ -12,18 +12,19 @@ public class Solution {
     public static ArrayList<String> accountsList = new ArrayList<>();
 
     public static void main(String[] args) {
-        //напишите тут ваш код
+        convertAccounts();
+        registerAccount();
+        registerAccount();
+        System.out.println(accountsList);
     }
 
     public static void convertAccounts() {
-        for (int i = 0; i < accountsList.size(); i++) {
-            accountsList.add(Accounts.getAccounts();
+        for (int i = 0; i < Accounts.getAccounts().length; i++) {
+            accountsList.add(Accounts.getAccounts()[i]);
         }
     }
 
     public static void registerAccount(String username) {
-        //В методе registerAccount класса Solution проверить входящий
-        // username на наличие его в списке accountsList и, если такового в этом списке нет,
-        // добавить username в список accountsList
+
     }
 }
