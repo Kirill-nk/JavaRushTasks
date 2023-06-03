@@ -13,9 +13,11 @@ public class Solution {
 
     public static void main(String[] args) {
         convertAccounts();
-        registerAccount();
-        registerAccount();
-        System.out.println(accountsList);
+        registerAccount("Амиго");
+        registerAccount("Диего");
+        for (String account : accountsList){
+            System.out.println(account);
+        }
     }
 
     public static void convertAccounts() {
@@ -25,6 +27,8 @@ public class Solution {
     }
 
     public static void registerAccount(String username) {
-
+        if(!accountsList.contains(username)){
+            accountsList.add(username);
+        }
     }
 }
