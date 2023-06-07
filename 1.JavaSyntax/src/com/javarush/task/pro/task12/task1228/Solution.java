@@ -27,7 +27,7 @@ public class Solution {
     public static List<String> decryptSecretMessage() {
         ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < secretMessage.size(); i += 3) {
-            list.add(i, secretMessage.get(i));
+            list.add(secretMessage.get(i));
         }
         return list;
     }
