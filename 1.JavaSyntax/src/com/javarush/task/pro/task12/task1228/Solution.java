@@ -25,11 +25,10 @@ public class Solution {
     }
 
     public static List<String> decryptSecretMessage() {
-List<String> message = List.of();
+        ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < secretMessage.size(); i += 3) {
-            secretMessage.get(i);
-            message.set(i,secretMessage.get(i));
+            list.add(i, secretMessage.get(i));
         }
-        return message;
+        return list;
     }
 }
