@@ -7,7 +7,8 @@ import java.util.ArrayList;
 */
 
 public class Solution {
-    public static int[] numbers = new int[10];
+    public static ArrayList<Integer> numbers = new ArrayList<>();
+    public static ArrayList<Integer> list = new ArrayList<>();
 
     public static void main(String[] args) {
         init();
@@ -18,22 +19,25 @@ public class Solution {
     }
 
     public static void init() {
-        for (int i = 0; i < 10; i++) {
-            numbers[i] = i;
-        }
+        for (int i = 0; i < 10; i++)
+            numbers.add(i);
+
+        for (int i = 0; i < numbers.size(); i++)
+            System.out.println(numbers.get(i));
     }
 
     public static void reverse() {
-        int n = numbers.length - 1;
-        for (int i = 0; i < numbers.length / 2; i++) {
-            int temp = numbers[i];
-            numbers[i] = numbers[n - i];
-            numbers[n - i] = temp;
-        }
+        for (int i = 10; i > 0; i--)
+                list.add(i);
+
+            for (int i = 0; i < numbers.size(); i++)
+                System.out.println(list.get(i));
+
+
     }
 
     private static void print() {
-        for (int number : numbers) {
+        for (Integer number : numbers) {
             System.out.println(number);
         }
     }
