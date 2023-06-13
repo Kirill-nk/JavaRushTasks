@@ -39,15 +39,23 @@ public class Solution {
 
     public static void removeBugWithFor(ArrayList<String> list) {
         for (int i = 0; i < list.size(); i++) {
-            
+            list.remove("bug");
         }
     }
 
     public static void removeBugWithWhile(ArrayList<String> list) {
-        //напишите тут ваш код
+        Iterator listList = list.iterator();
+        while (listList.hasNext()) {
+            list.listIterator() =
+        }
     }
 
     public static void removeBugWithCopy(ArrayList<String> list) {
-        //напишите тут ваш код
+        for (list : list
+             ) {
+            
+        } {
+            
+        }
     }
 }
