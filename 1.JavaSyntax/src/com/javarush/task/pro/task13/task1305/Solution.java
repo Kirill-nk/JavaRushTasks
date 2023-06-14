@@ -44,18 +44,20 @@ public class Solution {
     }
 
     public static void removeBugWithWhile(ArrayList<String> list) {
-        Iterator listList = list.iterator();
-        while (listList.hasNext()) {
-            list.listIterator() =
+        Iterator<String> listIterator = list.listIterator();
+        while (listIterator.hasNext()) {
+            Object o = listIterator.next();
+            if (o.equals("bug")) {
+                listIterator.remove();
+            }
         }
     }
 
     public static void removeBugWithCopy(ArrayList<String> list) {
-        for (list : list
-             ) {
-            
-        } {
-            
+        for (String s : list) {
+            if ("bug".equals(s)) {
+                list.remove(s);
+            }
         }
     }
 }
