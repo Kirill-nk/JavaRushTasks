@@ -39,25 +39,31 @@ public class Solution {
 
     public static void removeBugWithFor(ArrayList<String> list) {
         for (int i = 0; i < list.size(); i++) {
-            list.remove("bug");
+            String str = list.get(i);
+            if (str.equalsIgnoreCase("bug"))
+            {
+                list.remove(str);
+                i--;    // нужно уменьшить i, т.к. после удаления элементы сдвинулись
+            }
         }
     }
 
     public static void removeBugWithWhile(ArrayList<String> list) {
         Iterator<String> listIterator = list.listIterator();
         while (listIterator.hasNext()) {
-            Object o = listIterator.next();
-            if (o.equals("bug")) {
+            String o = listIterator.next();
+            if (o.equalsIgnoreCase("bug")) {
                 listIterator.remove();
             }
         }
     }
 
     public static void removeBugWithCopy(ArrayList<String> list) {
-        for (String s : list) {
-            if ("bug".equals(s)) {
-                list.remove(s);
-            }
+        ArrayList<String> listCopy = new ArrayList(list);
+        for (String str : listCopy)
+        {
+            if (str.equalsIgnoreCase("bug"))
+                list.remove(str);
         }
     }
 }
