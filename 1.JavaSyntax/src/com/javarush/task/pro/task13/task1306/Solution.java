@@ -10,6 +10,8 @@ import java.util.Collections;
 public class Solution {
 
     public static void copy(ArrayList<String> destination, ArrayList<String> source) {
+        ArrayList<Integer> srcList = new ArrayList<Integer>();
+        Collections.addAll(srcList, 1,2,3,4,5,6,7,8,9);
         if(destination.size() < source.size()) {
             throw new IndexOutOfBoundsException("Source does not fit in dest");
         }
