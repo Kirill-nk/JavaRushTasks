@@ -13,11 +13,21 @@ public class Solution {
 
     public static void main(String[] args) {
         fillMatrixLog();
-        //напишите тут ваш код
+        removeBugs();
+        matrixLogs.forEach(System.out::println);
     }
+
     public static void removeBugs() {
+    Set<String> set = new HashSet<>(matrixLogs);
+        for (String string : set) {
+            if (string.startsWith("buahaha")) {
+                matrixLogs.remove(string);
+
+            }
+        }
 
     }
+
 
     public static void fillMatrixLog() {
         for (int i = 0; i < 400; i++) {
