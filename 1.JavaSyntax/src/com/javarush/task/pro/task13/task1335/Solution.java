@@ -13,8 +13,14 @@ public class Solution {
     }
 
     public static List<Board.Node> clearBoard() {
-        //напишите тут ваш код
-        return null;
+        Board board = new Board();
+        String nsList = new LinkedList<>(board.getBoardNodes());
+        for (var i:nsList) {
+            if (i.getData().contains("snake")) {
+                i.setData("board");
+            }
+        }
+        return nsList;
     }
 
     private static void printList(List<?> list) {
