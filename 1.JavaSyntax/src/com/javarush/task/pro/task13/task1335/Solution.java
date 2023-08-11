@@ -14,13 +14,16 @@ public class Solution {
 
     public static List<Board.Node> clearBoard() {
         Board board = new Board();
-        String nsList = new LinkedList<>(board.getBoardNodes());
-        for (var i:nsList) {
-            if (i.getData().contains("snake")) {
-                i.setData("board");
+        List<Board.Node> boardNodes = board.getBoardNodes();
+        for (Board.Node boardNode : boardNodes) {
+            String data = boardNode.getData();
+            if (data.contains("snake")) {
+            boardNode.setData("board");
             }
         }
-        return nsList;
+
+
+        return boardNodes;
     }
 
     private static void printList(List<?> list) {
