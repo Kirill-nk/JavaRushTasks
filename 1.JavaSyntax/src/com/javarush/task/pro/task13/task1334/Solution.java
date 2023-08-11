@@ -15,15 +15,15 @@ public class Solution {
     }
 
     public static void setRewards() {
-        List<Voter> vList = Voter.generateVoters();
-        Rewards vMap = new Rewards();
-        Voter votKey;
-        Map votValue;
+        List<Voter> list = Voter.generateVoters();
+        Rewards rewards = new Rewards();
 
-        for (int i = 0; i < vList.size(); i++) {
-            if (vList.get(i).getPersonalQuality().equals("Good")) {
-                votKey = vList.get(i);
-                votValue = vMap.getGoodRewardsMap();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getPersonalQuality().equals("Good")) {
+                corporatePyramid.put(list.get(i), rewards.getGoodRewardsMap());
+            }
+            else if (list.get(i).getPersonalQuality().equals("Holy")) {
+                corporatePyramid.put(list.get(i), rewards.getHolyRewardsMap());
             }
         }
     }
