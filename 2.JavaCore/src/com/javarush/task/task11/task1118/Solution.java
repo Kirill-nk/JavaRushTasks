@@ -1,0 +1,29 @@
+package com.javarush.task.task11.task1118;
+
+/* 
+Городское хозяйство
+*/
+
+public class Solution {
+    public static void main(String[] args) {
+    }
+
+    public class Pet {
+
+    }
+
+    public class Cat extends Pet{
+
+    }
+
+    public class Car {
+
+    }
+
+    public class Dog extends Pet{
+
+    }
+}
+
+//Вы решили задачу лучше, чем 5% учеников. Вам удалось ее решить с 1 попытки.
+// Среднее количество попыток для этой задачи 1.05. Всего эту задачу решили 48822 учеников.
