@@ -14,6 +14,8 @@ public class Solution {
         Path path = Path.of(str).getRoot();
         System.out.println(path);
         //пустая строка
+        //пустая строка
+
     }
 }
 
