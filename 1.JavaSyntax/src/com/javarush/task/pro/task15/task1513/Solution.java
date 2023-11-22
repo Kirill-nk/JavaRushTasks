@@ -13,8 +13,6 @@ public class Solution {
         String str = scanner.nextLine();
         Path path = Path.of(str).getRoot();
         System.out.println(path);
-        //пустая строка
-        //пустая строка
 
     }
 }
