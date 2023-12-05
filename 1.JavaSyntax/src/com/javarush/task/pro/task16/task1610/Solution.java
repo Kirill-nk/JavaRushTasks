@@ -16,6 +16,18 @@ public class Solution {
     static LocalTime time4;
 
     public static void main(String[] args) {
-        //напишите тут ваш код
+        LocalTime timeMax = LocalTime.now();
+        LocalTime timeMin = LocalTime.now();
+        LocalTime time1 = LocalTime.of();
+        LocalTime time2 = LocalTime.now();
+        LocalTime time3 = LocalTime.now();
+        LocalTime time4 = LocalTime.now();
+        System.out.println(timeMax.getHour());
+        System.out.println(timeMin.getMinute());
+        System.out.println(time1.getSecond());
+        System.out.println(time2.getNano());
+        System.out.println(time3.getNano());
+        System.out.println(time4.getNano());
+
     }
 }
