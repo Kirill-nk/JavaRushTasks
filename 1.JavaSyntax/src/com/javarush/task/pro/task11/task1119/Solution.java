@@ -2,7 +2,7 @@ package com.javarush.task.pro.task11.task1119;
 
 import java.util.Objects;
 
-/*
+/* 
 Яблоки бывают разные
 */
 
@@ -10,7 +10,7 @@ public class Solution {
     public static void main(String[] args) {
         CellPhone cellPhone1 = new CellPhone("Pineapple", "piPhone Z");
         CellPhone cellPhone2 = new CellPhone("Pineapple", "piPhone Z");
-        if (cellPhone1.equals(cellPhone2)) {
+        if (cellPhone1 == cellPhone2) {
             System.out.println("телефоны одинаковые");
         }
     }
