@@ -25,3 +25,7 @@ public class Solution {
     char charValue = characterValueBox.charValue();
     boolean booleanValue = booleanValueBox.booleanValue();
 }
+
+//1202
+//Распаковка
+//В классе Solution представлены 8 объектов-оберток примитивных типов с именами вида типValueBox.

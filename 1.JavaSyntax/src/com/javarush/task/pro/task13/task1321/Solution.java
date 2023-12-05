@@ -28,6 +28,8 @@ public class Solution {
             en = "Недействительный день недели";
         }
         return en;
-
     }
 }
+//1321
+//Из switch в if
+//В классе Solution есть метод getTranslationForDayOfWeek(String)
