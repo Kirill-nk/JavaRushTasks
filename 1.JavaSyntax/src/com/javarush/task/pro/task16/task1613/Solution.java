@@ -1,8 +1,8 @@
 package com.javarush.task.pro.task16.task1613;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.chrono.ChronoLocalDateTime;
+import java.util.*;
 
 /* 
 Фильтруем выходные
@@ -35,7 +35,22 @@ public class Solution {
 
     public static boolean isWeekend(LocalDateTime dateTime) {
         //напишите тут ваш код
-
-        return false;
+        int dayWeek = dateTime.getDayOfWeek().getValue();
+        int hours = dateTime.getHour();
+        if (dayWeek == FRIDAY && hours >= WEEKEND_START_FRIDAY_CUT_OFF_HOUR) {
+            return true;
+        } else if (dayWeek == SATURDAY) {
+            return true;
+        } else if (dayWeek == SUNDAY && hours < WEEKEND_END_SUNDAY_CUT_OFF_HOUR) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
+
+//1613
+//Вы решили задачу лучше, чем 3% учеников.
+//Вам удалось ее решить с 5 попытки.
+//Среднее количество попыток для этой задачи 1.76.
+//Всего эту задачу решили 9389 учеников.
