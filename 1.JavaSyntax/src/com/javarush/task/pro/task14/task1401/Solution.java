@@ -78,8 +78,16 @@ public class Solution {
     static void findUserIndex(User user) {
         //напишите тут ваш код
         switch (users.indexOf(user)) {
-            case -1: System.out.println(NOT_FOUND); break;
-            default: System.out.printf(FOUND, user.getName(), users.indexOf(user));
+            case -1:
+                System.out.printf(NOT_FOUND, user.getName());
+                break;
+            default:
+                System.out.printf(FOUND, user.getName(), users.indexOf(user));
         }
     }
 }
+//1401
+//Вы решили задачу лучше, чем 2% учеников.
+// Вам удалось ее решить с 11 попытки.
+// Среднее количество попыток для этой задачи 2.78.
+// Всего эту задачу решили 12657 учеников.
