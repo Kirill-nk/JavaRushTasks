@@ -27,7 +27,7 @@ public class Solution {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-/*        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {
             addUser(new User());
         }
 
@@ -44,28 +44,42 @@ public class Solution {
         System.out.printf(INPUT_AGE, name);
         int age = Integer.parseInt(scanner.nextLine());
 
-        if (user.setName(name) == -1) {
-            System.out.println(CANNOT_BE_NULL);
-        } else if (user.setName(name) == -2) {
-            System.out.println(CANNOT_BE_EMPTY);
-        } else if (user.setName(name) == -3) {
-            System.out.println(CANNOT_CONTAIN_DIGIT);
-        } else
-            user.setName(name);
-
-        if (user.setAge(age) == -1) {
-            System.out.println(CANNOT_BE_NEGATIVE);
-        } else if (user.setAge(age) == -2) {
-            System.out.println(CANNOT_BE_TOO_BIG);
-        } else if (user.setAge(age) = "") {
-            user.setAge(age);
-
-            users.add(user);
+        //напишите тут ваш код
+        switch (user.setName(name)) {
+            case 0:
+                break;
+            case -1:
+                System.out.println(CANNOT_BE_NULL);
+                break;
+            case -2:
+                System.out.println(CANNOT_BE_EMPTY);
+                break;
+            case -3:
+                System.out.println(CANNOT_CONTAIN_DIGIT);
+                break;
+            default:
+                System.out.println(UNKNOWN_ERROR);
+        }
+        switch (user.setAge(age)) {
+            case 0:
+                break;
+            case -1:
+                System.out.println(CANNOT_BE_NEGATIVE);
+                break;
+            case -2:
+                System.out.println(CANNOT_BE_TOO_BIG);
+                break;
+            default:
+                System.out.println(UNKNOWN_ERROR);
         }
 
-//        static void findUserIndex (User user){
+    }
 
-//            System.out.printf(FOUND, user.getName(), users.indexOf(user));
-*/
+    static void findUserIndex(User user) {
+        //напишите тут ваш код
+        switch (users.indexOf(user)) {
+            case -1: System.out.println(NOT_FOUND); break;
+            default: System.out.printf(FOUND, user.getName(), users.indexOf(user));
         }
     }
+}
