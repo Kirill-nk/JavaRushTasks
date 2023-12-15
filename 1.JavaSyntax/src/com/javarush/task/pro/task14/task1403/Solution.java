@@ -26,7 +26,8 @@ public class Solution {
             , "Гвидон Недумов"
             , "Роксана Борисенко"
             , "Юлиан Мумбриков"
-            , "Зигфрид Горемыкин");
+            , "Зигфрид Горемыкин"
+            , "Зигфрид Горемыкин2");
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
