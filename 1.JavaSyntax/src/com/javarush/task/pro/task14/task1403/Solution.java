@@ -26,9 +26,7 @@ public class Solution {
             , "Гвидон Недумов"
             , "Роксана Борисенко"
             , "Юлиан Мумбриков"
-            , "Юлиан Мумбриков"2
-            , "Зигфрид Горемыкин"
-            , "Зигфрид Горемыкин2");
+            , "Зигфрид Горемыкин");
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -41,13 +39,19 @@ public class Solution {
             }
 
             int studentId;
-            studentId = Integer.parseInt(input);
-
             try {
+                studentId = Integer.parseInt(input);
                 System.out.println(ANSWERING + studentsJournal.get(studentId));
-            } catch (Exception e) {
-                System.out.println(NOT_EXIST);
+            } catch (NumberFormatException e) {
+                System.out.println(INTEGER_REQUIRED);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                    System.out.println(NOT_EXIST);
             }
         }
     }
 }
+//1403
+//Вы решили задачу лучше, чем 4% учеников.
+// Вам удалось ее решить с 3 попытки.
+// Среднее количество попыток для этой задачи 1.37.
+// Всего эту задачу решили 13296 учеников.
