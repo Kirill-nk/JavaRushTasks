@@ -1,8 +1,7 @@
 package com.javarush.task.pro.task16.task1615;
 
+import java.time.Duration;
 import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 /* 
@@ -24,38 +23,33 @@ public class Solution {
 
     static public Instant plusMinutes(Instant instant, long minutes) {
         //напишите тут ваш код
-        LocalDateTime date = LocalDateTime.of
+        return instant.plusSeconds(minutes * 60);
 
-        return null;
     }
 
     static public Instant plusHours(Instant instant, long hours) {
         //напишите тут ваш код
-
-        return null;
+        return plusMinutes(instant, hours * 60);
     }
 
     static public Instant plusDays(Instant instant, long days) {
         //напишите тут ваш код
-
-        return null;
+        return plusHours(instant, days * 24);
     }
 
     static public Instant minusMinutes(Instant instant, long minutes) {
         //напишите тут ваш код
-
-        return null;
+        return ChronoUnit.MINUTES.addTo(instant, -minutes);
     }
 
     static public Instant minusHours(Instant instant, long hours) {
         //напишите тут ваш код
-
-        return null;
+        return ChronoUnit.HOURS.addTo(instant, - hours);
     }
 
     static public Instant minusDays(Instant instant, long days) {
         //напишите тут ваш код
 
-        return null;
+        return minusHours(instant, days * 24);
     }
 }
