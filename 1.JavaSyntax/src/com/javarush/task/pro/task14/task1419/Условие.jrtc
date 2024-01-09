@@ -20,5 +20,3 @@ All tests passed. You may go.
 3.	В результате работы метода question2 не должно появляться ошибки NullPointerException.
 4.	В результате работы метода question3 не должно появляться ошибки ArrayIndexOutOfBoundsException.
 5.	В результате работы метода question4 не должно появляться ошибки NumberFormatException. Также на экран должна быть выведена строка &quot;All tests passed. You may go.&quot;.
-
-
