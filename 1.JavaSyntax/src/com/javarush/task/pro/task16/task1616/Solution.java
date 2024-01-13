@@ -28,7 +28,6 @@ public class Solution {
             zones.add(zone);
         }
             return zones;
-
     }
 
     static ZonedDateTime getBeijingDateTime() {
