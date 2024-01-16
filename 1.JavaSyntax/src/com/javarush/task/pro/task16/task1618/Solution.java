@@ -21,8 +21,14 @@ public class Solution {
 
     static LocalDateTime changeZone(LocalDateTime fromDateTime, ZoneId fromZone, ZoneId toZone) {
         //напишите тут ваш код
-        LocalDateTime newTime;
-        newTime = new ZonedDateTime(fromDateTime, fromZone, toZone);
-        return newTime;
+        ZonedDateTime fromZon1 = fromDateTime.atZone(fromZone);
+        ZonedDateTime toZone2 = fromZon1.withZoneSameInstant(toZone);
+
+        return toZone2.toLocalDateTime();
     }
 }
+//1618
+//Вы решили задачу лучше, чем 32% учеников.
+//Вам удалось ее решить с 1 попытки.
+//Среднее количество попыток для этой задачи 1.61.
+//Всего эту задачу решили 9024 учеников.
