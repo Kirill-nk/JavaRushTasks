@@ -24,6 +24,18 @@ public class CountGame extends Game {
 
     public void showResult() {
         //напишите тут ваш код
+        int sum=0;
+        int count=0;
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (getCellColor(i,j)==Color.GREEN){
+                    sum = sum + getCellNumber(i, j);
+                    count = count + 1;
+                }
+            }
+        }
+        printSum(sum);
+        printCountOfGreenCells(count);
     }
 
     private void printSum(int sum) {
@@ -34,3 +46,9 @@ public class CountGame extends Game {
         System.out.println("Количество зеленых клеток = " + count);
     }
 }
+
+//game04
+//Вы решили задачу лучше, чем 17% учеников.
+//Вам удалось ее решить с 3 попытки.
+//Среднее количество попыток для этой задачи 2.22.
+//Всего эту задачу решили 7056 учеников.
