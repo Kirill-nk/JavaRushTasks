@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Catzilla {
     private int fusionReactorCores = 5;
-    private Integer fangStrength = null;
+    private int fangStrength;
     private int[] clawsPerPaw = {5, 5, 4, 4};
     private List<Exception> exceptionRockets = List.of(new Exception("Take that!"), new Exception("Catzilla power!"), new Exception("You messed with the wrong cat!"),
             new Exception("You better not get up again!"), new Exception("Bang!"), new Exception("Kapaow!"),
@@ -16,22 +16,21 @@ public class Catzilla {
     public void overclockReactor() throws InterruptedException {
         System.out.println("Overclocking reactor...");
         this.fusionReactorCores = 10;
-        overclockReactor();
         System.out.printf("Reactor has been overclocked. %d cores are ready.\n", this.fusionReactorCores);
     }
 
     public void enlargeFangs() throws InterruptedException {
         System.out.println("Initializing tungsten fangs...");
-        this.fangStrength.intValue(10);
+        this.fangStrength=10;
         System.out.println("Fangs are ready with strength 10.");
     }
 
     public void generateExtraClaws() throws InterruptedException {
         System.out.println("Generating extra claws...");
 
-        for (int i = 1; i <= clawsPerPaw.length; i++) {
+        for (int i = 0; i < clawsPerPaw.length; i++) {
             clawsPerPaw[i] += 2;
-            System.out.printf("Paw %d is ready with %d claws.\n", i, clawsPerPaw[i]);
+            System.out.printf("Paw %d is ready with %d claws.\n", i+1, clawsPerPaw[i]);
         }
     }
 
@@ -40,8 +39,14 @@ public class Catzilla {
 
         for (Exception exception : exceptionRockets) {
             Thread.sleep(100);
-            System.out.println(exception.getMessage());
+            exception.printStackTrace();
         }
         System.out.println("Rocket test completed.");
     }
 }
+
+//1421
+//Вы решили задачу лучше, чем 3% учеников.
+//Вам удалось ее решить с 11 попытки.
+//Среднее количество попыток для этой задачи 3.07.
+//Всего эту задачу решили 627 учеников.
