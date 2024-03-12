@@ -15,6 +15,14 @@ public class Solution {
 
     public static void printDNA() {
         //напишите тут ваш код
+        Thread current = Thread.currentThread();
+        StackTraceElement[] methods = current.getStackTrace();
+
+        for (StackTraceElement[] stackTraceElements : getDNA()) {
+            StackTraceElement traceElement = stackTraceElements[1];
+            System.out.printf("File name: %s, Method name: %s, Line number: %d\n",
+                    traceElement.getFileName(), traceElement.getMethodName(), traceElement.getLineNumber());
+        }
     }
 
     private static List<StackTraceElement[]> getDNA() {
@@ -44,3 +52,9 @@ public class Solution {
         return Thread.currentThread().getStackTrace();
     }
 }
+
+//1422
+//Вы решили задачу лучше, чем 1% учеников.
+//Вам удалось ее решить с 8 попытки.
+//Среднее количество попыток для этой задачи 1.74.
+//Всего эту задачу решили 599 учеников.
