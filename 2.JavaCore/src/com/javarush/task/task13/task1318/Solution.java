@@ -19,12 +19,12 @@ public class Solution {
         String src = reader.readLine();
 
 
-        try (FileInputStream bufferedReader = new FileInputStream(src)) {
-            int i;
-            while ((i = bufferedReader.read()) != -1) {
-                System.out.print((char) i);
+        try (BufferedReader reader1 = new BufferedReader(new InputStreamReader(new FileInputStream(src)))) {
+            while (reader1.ready()) {
+                System.out.println(reader1.readLine());
             }
         }reader.close();
+
     }
 }
 //1318
