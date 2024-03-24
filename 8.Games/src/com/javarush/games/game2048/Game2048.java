@@ -29,33 +29,17 @@ public class Game2048 extends Game {
     }
 
     private void createNewNumber() {
-        getRandomNumber(SIDE);
-        getRandomNumber(SIDE);
-        getRandomNumber(10);
-
-        int pust = 0;
-        for (int[] mF : gameField) {
-            for (int f : mF)
-                if (f == 0)
-                    pust++;
-        }
-        if (pust == 0)
-            return;
-        int newNumber = 2;
-        if (getRandomNumber(10) == 9)
-            newNumber = 4;
-
-        int field = getRandomNumber(pust) + 1;
-
-        for (int i = 0; i < SIDE; i++)
-            for (int j = 0; j < SIDE; j++) {
-                int f = gameField[i][j];
-                if (f == 0)
-                    field--;
-                if (field == 0) {
-                    gameField[i][j] = newNumber;
-                    return;
-                }
+        int x = getRandomNumber(SIDE);
+        int y = getRandomNumber(SIDE);
+        int number = getRandomNumber(10);
+        if (gameField[x][y] == 0) {
+            if (number < 9) {
+                gameField[x][y] = 2;
+            } else {
+                gameField[x][y] = 4;
             }
+        } else {
+            createNewNumber();
+        }
     }
 }
