@@ -1,6 +1,7 @@
 package com.javarush.task.task15.task1514;
 
-class ListAdapter implements BetaList {
+/*class ListAdapter implements BetaList {
+
     private AlphaList list;
 
     ListAdapter(AlphaList list) {
@@ -30,4 +31,4 @@ class ListAdapter implements BetaList {
             }
         }
     }
-}
+}*/
