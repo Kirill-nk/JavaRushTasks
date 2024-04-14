@@ -4,10 +4,6 @@ public abstract class AbstractRobot implements Attackable, Defensable {
     private static int hitCount;
     private String name;
 
-/*
-    public Robot(String name) {
-        this.name = name;
-    }
 
     public String getName() {
         return name;
@@ -22,8 +18,10 @@ public abstract class AbstractRobot implements Attackable, Defensable {
         } else if (hitCount == 2) {
             attackedBodyPart = BodyPart.HEAD;
         } else if (hitCount == 3) {
-            hitCount = 0;
             attackedBodyPart = BodyPart.LEG;
+        } else {
+            hitCount = 0;
+            attackedBodyPart = BodyPart.CHEST;
         }
         return attackedBodyPart;
     }
@@ -37,11 +35,11 @@ public abstract class AbstractRobot implements Attackable, Defensable {
         } else if (hitCount == 2) {
             defendedBodyPart = BodyPart.LEG;
         } else if (hitCount == 3) {
-            hitCount = 0;
             defendedBodyPart = BodyPart.ARM;
+        } else {
+            hitCount = 0;
+            defendedBodyPart = BodyPart.CHEST;
         }
         return defendedBodyPart;
     }
-*/
 }
-
