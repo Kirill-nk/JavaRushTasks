@@ -22,8 +22,7 @@ public class Game2048 extends Game {
     private void drawScene() {
         for (int x = 0; x < SIDE; x++) {
             for (int y = 0; y < SIDE; y++) {
-                setCellColor(x, y, Color.CHARTREUSE);
-
+                setCellColoredNumber(x, y, gameField[y][x]);
             }
         }
     }
@@ -41,5 +40,57 @@ public class Game2048 extends Game {
         } else {
             createNewNumber();
         }
+    }
+
+    private Color getColorByValue(int value) {
+        switch (value) {
+            case 0:
+                return Color.WHITE;
+            case 2:
+                return Color.LIGHTPINK;
+            case 4:
+                return Color.BLUEVIOLET;
+            case 8:
+                return Color.BLUE;
+            case 16:
+                return Color.CYAN;
+            case 32:
+                return Color.LIGHTSEAGREEN;
+            case 64:
+                return Color.LIMEGREEN;
+            case 128:
+                return Color.ORANGE;
+            case 256:
+                return Color.INDIANRED;
+            case 512:
+                return Color.RED;
+            case 1024:
+                return Color.MAGENTA;
+            case 2048:
+                return Color.MEDIUMVIOLETRED;
+            default:
+                return null;
+        }
+    }
+
+    private void setCellColoredNumber(int x, int y, int value) {
+        Color color = getColorByValue(value);
+        setCellValueEx(x, y, color, value > 0 ? value + "" : "");
+    }
+
+    private boolean compressRow(int[] row) {
+        int position = 0;
+        boolean result = false;
+        for (int i = 0; i < row.length; i++) {
+            if (row[i] > 0) {
+                if (i != position) {
+                    row[position] = row[i];
+                    row[i] = 0;
+                    result = true;
+                }
+                position++;
+            }
+        }
+        return result;
     }
 }
