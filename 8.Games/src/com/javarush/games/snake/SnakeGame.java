@@ -14,9 +14,7 @@ public class SnakeGame extends Game {
     }
 
     private void createGame() {
-
         drawScene();
-
     }
 
     private void drawScene() {
@@ -27,3 +25,5 @@ public class SnakeGame extends Game {
         }
     }
 }
+//Игра змейка (5/20)
+//Вы решили задачу лучше, чем 21% учеников. Вам удалось ее решить с 2 попытки. Среднее количество попыток для этой задачи 2.4. Всего эту задачу решили 6425 учеников.
