@@ -97,17 +97,47 @@ public class Game2048 extends Game {
     private boolean mergeRow(int[] row) {
         int position = 0;
         boolean result = false;
-        for (int i = 0; i < row.length-1; i++) {
-            if (row[i] == row[i+1] && row[i] != 0) {
+        for (int i = 0; i < row.length - 1; i++) {
+            if (row[i] == row[i + 1] && row[i] != 0) {
                 row[i] += row[i];
-                row[i+1] = 0;
+                row[i + 1] = 0;
                 result = true;
 
             }
         }
         return result;
     }
+
+    @Override
+    public void onKeyPress(Key key) {
+        if (key == Key.LEFT) {
+            moveLeft();
+        } else if (key == Key.RIGHT) {
+            moveRight();
+        } else if (key == Key.UP) {
+            moveUp();
+        } else if (key == Key.DOWN) {
+            moveDown();
+        }
+
+    }
+
+    private void moveLeft() {
+
+    }
+
+    private void moveRight() {
+
+    }
+
+    private void moveUp() {
+
+    }
+
+    private void moveDown() {
+
+    }
 }
 
-//game2048, шаг 8, решено
-//Вы решили задачу лучше, чем 52% учеников. Вам удалось ее решить с 1 попытки. Среднее количество попыток для этой задачи 2.33. Всего эту задачу решили 3281 учеников.
+//2048(9/18)
+//Вы решили задачу лучше, чем 9% учеников. Вам удалось ее решить с 2 попытки. Среднее количество попыток для этой задачи 1.54. Всего эту задачу решили 3212 учеников.
