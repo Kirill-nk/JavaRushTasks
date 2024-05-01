@@ -6,41 +6,11 @@ package com.javarush.task.task14.task1416;
 
 public class Solution {
     public static void main(String[] args) {
-        CanSwim creature = new Orca() {
-            @Override
-            public void walk() {
-
-            }
-
-            @Override
-            CanSwim getCurrentCreature() {
-                return this;
-            }
-        };
+        CanSwim creature = new Orca();
         creature.swim();
-        creature = new Whale() {
-            @Override
-            public void walk() {
-
-            }
-
-            @Override
-            CanSwim getCurrentCreature() {
-                return this;
-            }
-        };
+        creature = new Whale();
         creature.swim();
-        creature = new RiverOtter() {
-            @Override
-            public void swim() {
-
-            }
-
-            @Override
-            public void walk() {
-
-            }
-        };
+        creature = new RiverOtter();
         creature.swim();
     }
 
@@ -69,8 +39,7 @@ public class Solution {
         abstract CanSwim getCurrentCreature();
     }
 
-    static abstract class Orca extends SeaCreature implements CanSwim {
-        public abstract void walk();
+    static class Orca extends SeaCreature implements CanSwim {
 
         @Override
         CanSwim getCurrentCreature() {
@@ -78,10 +47,27 @@ public class Solution {
         }
     }
 
-    static abstract class Whale extends SeaCreature implements CanSwim {
-        public abstract void walk();
+    static class Whale extends SeaCreature implements CanSwim {
+
+        @Override
+        CanSwim getCurrentCreature() {
+            return this;
+        }
     }
 
-    static abstract class RiverOtter implements CanSwim, CanWalk {
+    static class RiverOtter implements CanSwim,CanWalk {
+        @Override
+        public void walk() {
+
+        }
+
+        @Override
+        public void swim() {
+
+        }
     }
 }
+
+
+//1416. Стой, кто плывет?
+//Вы решили задачу лучше, чем 0% учеников. Вам удалось ее решить с 18 попытки. Среднее количество попыток для этой задачи 1.92. Всего эту задачу решили 40459 учеников.
