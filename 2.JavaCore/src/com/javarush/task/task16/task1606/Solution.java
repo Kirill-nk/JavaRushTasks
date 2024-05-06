@@ -12,6 +12,7 @@ public class Solution {
         PrintListThread firstThread = new PrintListThread("firstThread");
         PrintListThread secondThread = new PrintListThread("secondThread");
         firstThread.start();
+        firstThread.join();
         secondThread.start();
     }
 
@@ -41,3 +42,8 @@ public class Solution {
         }
     }
 }
+//1606. В нужное время в нужном месте.
+//Вы решили задачу лучше, чем 17% учеников.
+//Вам удалось ее решить с 1 попытки.
+//Среднее количество попыток для этой задачи 1.22.
+//Всего эту задачу решили 40015 учеников.
