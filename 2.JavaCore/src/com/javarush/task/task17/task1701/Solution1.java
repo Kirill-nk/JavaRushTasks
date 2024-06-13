@@ -7,7 +7,7 @@ import java.util.List;
 Заметки
 */
 
-public class Solution {
+public class Solution1 {
     public static void main(String[] args) {
         new NoteThread().start();
         new NoteThread().start();
