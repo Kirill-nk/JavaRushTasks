@@ -52,10 +52,12 @@ public class Solution {
         }
     }
 
-    public static class SortThread implements Runnable {
+    public static class SortThread extends Thread {
         public void run() {
             sort(testArray);
         }
     }
 }
 
+//1702. Вместе быстрее? Ща проверим :)
+//Вы решили задачу лучше, чем 10% учеников. Вам удалось ее решить с 1 попытки. Среднее количество попыток для этой задачи 1.16. Всего эту задачу решили 35266 учеников.
