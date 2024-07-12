@@ -5,7 +5,7 @@ package com.javarush.task.task17.task1709;
 */
 
 public class Solution {
-    public static int proposal = 0;
+    public static volatile int proposal = 0;
 
     public static void main(String[] args) {
         new AcceptProposal().start();
@@ -43,3 +43,7 @@ public class Solution {
         }
     }
 }
+//1709. Вы решили задачу лучше, чем 2% учеников.
+//Вам удалось ее решить с 2 попытки.
+//Среднее количество попыток для этой задачи 1.09.
+//Всего эту задачу решили 34762 учеников
