@@ -39,7 +39,6 @@ public class Solution {
                     System.out.println("Принято предложение №" + proposal);
                     thisProposal = proposal;
                 }
-
             }
         }
     }
