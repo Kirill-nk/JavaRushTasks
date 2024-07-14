@@ -15,20 +15,30 @@ public class Solution {
         String url = reader.readLine();
         //напишите тут ваш код
         int index = url.indexOf("?");
-        String view = url.substring(index+1);
-        String[] strings = view.split("&");
+        String view = url.substring(index + 1);
+        String[] words = view.split("&");
 
-        for (int i = 0; i < strings.length; i++) {
-            if (strings[i].contains("=")) {
-                int idx = strings[i].indexOf("=");
-                String str = strings[i].substring(0, idx);
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].contains("=")) {
+                int idx = words[i].indexOf("=");
+                String str = words[i].substring(0, idx);
                 System.out.print(str + " ");
             } else {
-                System.out.print(strings[i] + " ");
+                System.out.print(words[i] + " ");
+            }
+        }
+        System.out.println();
+        for (String word : words) {
+            if (word.contains("obj")) {
+                String string = word.substring(word.indexOf("=") + 1);
+                try {
+                    alert(Double.parseDouble(string));
+                } catch (NumberFormatException e) {
+                    alert(string);
+                }
             }
         }
 
-//        выучить методы класса стринг
 
     }
 
@@ -40,3 +50,5 @@ public class Solution {
         System.out.println("String: " + value);
     }
 }
+
+//Вы решили задачу лучше, чем 37% учеников. Вам удалось ее решить с 2 попытки. Среднее количество попыток для этой задачи 3.17. Всего эту задачу решили 31091 учеников.
