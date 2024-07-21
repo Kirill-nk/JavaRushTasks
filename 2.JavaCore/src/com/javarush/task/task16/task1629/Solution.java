@@ -17,9 +17,8 @@ public class Solution {
 
         //add your code here - добавьте код тут
 
-
-
         t1.printResult();
+        t2.printResult();
         t2.printResult();
     }
 
@@ -27,16 +26,7 @@ public class Solution {
     public static class Read3Strings extends Thread {
         @Override
         public void run() {
-        while (!isInterrupted())
-            try {
-                String a1 = reader.readLine();
-                String b1 = reader.readLine();
-                String c1 = reader.readLine();
-            } catch (IOException e){
-            }
-        }
-        public void printResult(){
-            System.out.println();
+
         }
     }
 }
