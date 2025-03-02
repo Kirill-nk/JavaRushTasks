@@ -12,9 +12,7 @@ public class Solution {
         Scanner scanner = new Scanner(System.in);
         String fileName = scanner.nextLine();
 
-        File file = new File(fileName);
-
-        try (FileInputStream fileInputStream = new FileInputStream(file)) {
+        try (FileInputStream fileInputStream = new FileInputStream(fileName)) {
             Set<Integer> uniqueBytes = new HashSet<>();
             int currentByte;
             while ((currentByte = fileInputStream.read()) != -1) {
