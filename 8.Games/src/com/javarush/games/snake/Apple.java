@@ -10,6 +10,8 @@ public class Apple extends GameObject {
         super(x, y);
     }
 
+    public  boolean isAlive = true;
+
     public void draw(Game game) {
         game.setCellValueEx(x, y, Color.NONE, APPLE_SIGN, Color.GREEN, 75);
     }

@@ -1,11 +1,10 @@
 package com.javarush.games.snake;
-
 import com.javarush.engine.cell.*;
-
 public class SnakeGame extends Game {
 
     public static final int WIDTH = 15;
     public static final int HEIGHT = 15;
+    private Snake snake;
 
     @Override
     public void initialize() {
@@ -13,7 +12,10 @@ public class SnakeGame extends Game {
         createGame();
     }
 
+
     private void createGame() {
+        Snake newSnake = new Snake(WIDTH/2,  HEIGHT/2);
+        snake = newSnake;
         drawScene();
     }
 
@@ -23,7 +25,6 @@ public class SnakeGame extends Game {
                 setCellColor(x, y, Color.DARKTURQUOISE);
             }
         }
+        snake.draw(this);
     }
 }
-//Игра змейка (5/20)
-//Вы решили задачу лучше, чем 21% учеников. Вам удалось ее решить с 2 попытки. Среднее количество попыток для этой задачи 2.4. Всего эту задачу решили 6425 учеников.
