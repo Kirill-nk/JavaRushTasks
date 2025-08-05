@@ -1,7 +1,5 @@
 -- Write your code here:
-insert into library.publisher
+insert into library.publisher (id, name)
 values (1, 'Азбука'),
        (2, 'Фолио'),
        (3, 'Wordsworth Editions');
-
-select * from library.publisher

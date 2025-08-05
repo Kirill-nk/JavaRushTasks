@@ -1,5 +1,6 @@
 -- Write your code here:
-select full_name, count(title) books
+select a.full_name, count(title) books
 from book
 join library.author a on a.id = book.author_id
-group by full_name
+group by book.author_id
+having books > 1
