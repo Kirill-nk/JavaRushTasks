@@ -71,6 +71,9 @@ INSERT INTO client (name_client, city_id, email) VALUES
             ('Яковлева Галина', 1, 'yakovleva@test');
 select * from client;
 
+insert into client (client_id, name_client, city_id, email)
+values (default, 'Попов Илья', 1, 'popov@test');
+
 DROP TABLE IF EXISTS buy;
 CREATE TABLE buy(
     buy_id int auto_increment primary key,
