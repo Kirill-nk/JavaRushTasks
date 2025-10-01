@@ -3,6 +3,7 @@ DROP DATABASE abiturient;
 
 USE abiturient;
 
+<<<<<<< HEAD
 CREATE TABLE IF NOT EXISTS program_enrollee
 (
     program_enrollee_id
@@ -21,6 +22,12 @@ CREATE TABLE IF NOT EXISTS program_enrollee
         not
             null
 );
+=======
+CREATE TABLE IF NOT EXISTS program_enrollee (
+    program_enrollee_id    int    not    null    auto_increment    primary    key,
+    program_id    int    not    null,
+    enrollee_id    int    not    null);
+>>>>>>> origin/master
 
 INSERT INTO program_enrollee (program_id, enrollee_id)
 VALUES (3, 1),
@@ -44,16 +51,27 @@ from program_enrollee;
 CREATE TABLE IF NOT EXISTS department
 (
     department_id int not null auto_increment primary key,
+<<<<<<< HEAD
     name_department varchar(30) not null);
 INSERT INTO department(name_department)
 values (1, 'Инженерная школа'),
+=======
+    name_department varchar(30) not null
+    );
+INSERT INTO department(name_department)
+values ('Инженерная школа'),
+>>>>>>> origin/master
        ('Школа естественных наук');
 select *
 from department;
 
 create table program
 (
+<<<<<<< HEAD
     program_id    int         not null auto_increment primary key,
+=======
+    program_id    int not null auto_increment primary key,
+>>>>>>> origin/master
     name_program  varchar(50) not null,
     department_id int,
     plan          int
@@ -82,6 +100,7 @@ values ('Баранов Павел'),
 select *
 from enrollee;
 
+<<<<<<< HEAD
 create table if not exists program_subject
 (
     program_subject_id
@@ -96,6 +115,13 @@ create table if not exists program_subject
     min_result
         int
 );
+=======
+create table if not exists program_subject(
+    program_subject_id int primary key auto_increment,
+    program_id int,
+    subject_id int,
+    min_result int);
+>>>>>>> origin/master
 INSERT INTO program_subject (program_id, subject_id, min_result)
 values (1, 1, 40),
        (1, 2, 50),
@@ -112,6 +138,7 @@ values (1, 1, 40),
 select *
 from program_subject;
 
+<<<<<<< HEAD
 CREATE TABLE IF NOT EXISTS subject
 (
     subject_id
@@ -122,6 +149,12 @@ CREATE TABLE IF NOT EXISTS subject
     name_subject
         varchar(50)
 );
+=======
+CREATE TABLE IF NOT EXISTS subject (
+    subject_id int primary key auto_increment,
+    name_subject varchar(50)
+    );
+>>>>>>> origin/master
 INSERT INTO subject (name_subject)
 values ('Русский язык'),
        ('Математика'),
@@ -130,6 +163,7 @@ values ('Русский язык'),
 select *
 from subject;
 
+<<<<<<< HEAD
 CREATE TABLE IF NOT EXISTS enrollee_subject
 (
     enrollee_subject_id
@@ -144,6 +178,13 @@ CREATE TABLE IF NOT EXISTS enrollee_subject
     result
         int
 );
+=======
+CREATE TABLE IF NOT EXISTS enrollee_subject(enrollee_subject_id
+    int    primary    key    auto_increment,
+    enrollee_id    int,
+    subject_id    int,
+    result    int);
+>>>>>>> origin/master
 INSERT INTO enrollee_subject (enrollee_id, subject_id, result)
 values (1, 1, 68),
        (1, 2, 70),
@@ -172,10 +213,16 @@ from enrollee_subject;
 DROP TABLE achievement;
 CREATE TABLE IF NOT EXISTS achievement
 (
+<<<<<<< HEAD
     achievement_id   int auto_increment not null primary key,
     name_achievement varchar(25),
     bonus            int
 );
+=======
+    achievement_id int auto_increment not    null    primary  key,
+    name_achievement    varchar(    25),
+    bonus int    );
+>>>>>>> origin/master
 INSERT INTO achievement (name_achievement, bonus)
 values ('Золотая медаль', 5),
        ('Серебряная медаль', 3),
@@ -187,6 +234,7 @@ from achievement;
 
 CREATE TABLE IF NOT EXISTS enrollee_achievement
 (
+<<<<<<< HEAD
     enrollee_achiev_id int not null auto_increment primary key,
     enrollee_id        int,
     achievement_id     int
@@ -227,3 +275,19 @@ select * from applicant_order;
 
 
 
+=======
+    enrollee_achiev_id    int    not    null    auto_increment    primary    key,
+    enrollee_id    int,
+    achievement_id    int);
+
+INSERT INTO enrollee_achievement (enrollee_id, achievement_id)
+values (1, 2),
+       (1, 3),
+       (3, 1),
+       (4, 4),
+       (5, 1),
+       (5, 3);
+
+select *
+from enrollee_achievement;
+>>>>>>> origin/master

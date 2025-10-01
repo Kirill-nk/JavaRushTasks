@@ -1,4 +1,4 @@
 -- Write your code here:
-select *, DATEDIFF(CURDATE(), date_time) diff
+select *
 from event
 where DATEDIFF(CURDATE(), date_time) < 20

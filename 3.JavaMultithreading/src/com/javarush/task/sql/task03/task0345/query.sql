@@ -1,5 +1,5 @@
 -- Write your code here:
-select *
+select last_name
 from film_directors
 left join (select director_id, films.grossed from films where grossed > 100) film
 on film_directors.id = film.director_id
