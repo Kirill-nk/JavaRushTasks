@@ -1,0 +1,55 @@
+package com.javarush.games.racer;
+
+import com.javarush.engine.cell.*;
+
+public class RacerGame extends Game {
+    public static final int WIDTH = 64;
+    public static final int HEIGHT = 64;
+    public static final int CENTER_X = WIDTH / 2;
+    public static final int ROADSIDE_WIDTH = 14;
+
+
+    @Override
+    public void initialize() {
+        super.initialize();
+        showGrid(false);
+        setScreenSize(WIDTH, HEIGHT);
+        createGame();
+    }
+
+    @Override
+    public void setScreenSize(int width, int height) {
+        super.setScreenSize(width, height);
+    }
+
+    private void createGame() {
+        drawScene();
+    }
+
+    private void drawScene() {
+        drawField();
+    }
+
+    @Override
+    public void setCellColor(int x, int y, Color color) {
+        if (x < 0 || x >= WIDTH || y < 0 || y >= HEIGHT) {
+            return;
+        } else {
+            super.setCellColor(x, y, color);
+        }
+    }
+
+    private void drawField() {
+        for (int x = 0; x < WIDTH; x++) {
+            for (int y = 0; y < HEIGHT; y++) {
+                if (x == CENTER_X) {
+                    setCellColor(x, y, Color.WHITE);
+                } else if (x >= ROADSIDE_WIDTH && x < WIDTH - ROADSIDE_WIDTH) {
+                    setCellColor(x, y, Color.DIMGREY);
+                } else {
+                    setCellColor(x, y, Color.GREEN);
+                }
+            }
+        }
+    }
+}
