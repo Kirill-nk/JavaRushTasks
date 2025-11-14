@@ -9,6 +9,7 @@ public class RacerGame extends Game {
     public static final int ROADSIDE_WIDTH = 14;
 
 
+
     @Override
     public void initialize() {
         super.initialize();
@@ -45,9 +46,9 @@ public class RacerGame extends Game {
                 if (x == CENTER_X) {
                     setCellColor(x, y, Color.WHITE);
                 } else if (x >= ROADSIDE_WIDTH && x < WIDTH - ROADSIDE_WIDTH) {
-                    setCellColor(x, y, Color.DIMGREY);
-                } else {
                     setCellColor(x, y, Color.GREEN);
+                } else {
+                    setCellColor(x,y,Color.GREY);
                 }
             }
         }
