@@ -7,6 +7,7 @@ public class RacerGame extends Game {
     public static final int HEIGHT = 64;
     public static final int CENTER_X = WIDTH / 2;
     public static final int ROADSIDE_WIDTH = 14;
+    private RoadMarking roadMarking;
 
 
 
@@ -24,11 +25,13 @@ public class RacerGame extends Game {
     }
 
     private void createGame() {
+        roadMarking = new RoadMarking();
         drawScene();
     }
 
     private void drawScene() {
         drawField();
+        roadMarking.draw(this);
     }
 
     @Override
