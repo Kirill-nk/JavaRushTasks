@@ -7,10 +7,9 @@ public class RacerGame extends Game {
     public static final int HEIGHT = 64;
     public static final int CENTER_X = WIDTH / 2;
     public static final int ROADSIDE_WIDTH = 14;
-    private RoadMarking roadMarking;
     private PlayerCar player;
 
-
+    private RoadMarking roadMarking;
 
     @Override
     public void initialize() {
@@ -55,18 +54,30 @@ public class RacerGame extends Game {
                 } else if (x >= ROADSIDE_WIDTH && x < WIDTH - ROADSIDE_WIDTH) {
                     setCellColor(x, y, Color.GREEN);
                 } else {
-                    setCellColor(x,y,Color.GREY);
+                    setCellColor(x, y, Color.GREY);
                 }
             }
         }
     }
-    private void moveAll(){
+
+    private void moveAll() {
         roadMarking.move(player.speed);
+        player.move();
     }
 
     @Override
     public void onTurn(int step) {
         moveAll();
         drawScene();
+    }
+
+    @Override
+    public void onKeyPress(Key key){
+        if (key == Key.LEFT) {
+            player.setDirection(Direction.LEFT);
+        }
+        if (key == Key.RIGHT) {
+            player.setDirection(Direction.RIGHT);
+        }
     }
 }
