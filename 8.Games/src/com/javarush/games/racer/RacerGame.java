@@ -29,6 +29,7 @@ public class RacerGame extends Game {
         roadMarking = new RoadMarking();
         player = new PlayerCar();
         drawScene();
+        setTurnTimer(40);
     }
 
     private void drawScene() {
@@ -58,5 +59,14 @@ public class RacerGame extends Game {
                 }
             }
         }
+    }
+    private void moveAll(){
+        roadMarking.move(player.speed);
+    }
+
+    @Override
+    public void onTurn(int step) {
+        moveAll();
+        drawScene();
     }
 }

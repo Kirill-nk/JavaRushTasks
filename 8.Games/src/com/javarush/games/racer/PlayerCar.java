@@ -6,4 +6,6 @@ public class PlayerCar extends GameObject {
     public PlayerCar() {
         super(RacerGame.WIDTH / 2 + 2, RacerGame.HEIGHT - playerCarHeight - 1, ShapeMatrix.PLAYER);
     }
+    public int speed = 1;
+
 }
