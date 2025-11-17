@@ -52,9 +52,9 @@ public class RacerGame extends Game {
                 if (x == CENTER_X) {
                     setCellColor(x, y, Color.WHITE);
                 } else if (x >= ROADSIDE_WIDTH && x < WIDTH - ROADSIDE_WIDTH) {
-                    setCellColor(x, y, Color.GREEN);
+                    setCellColor(x, y, Color.DIMGREY);
                 } else {
-                    setCellColor(x, y, Color.GREY);
+                    setCellColor(x, y, Color.GREEN);
                 }
             }
         }
