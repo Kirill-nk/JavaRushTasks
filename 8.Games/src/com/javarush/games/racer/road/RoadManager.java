@@ -30,4 +30,16 @@ public class RoadManager {
         }
     }
 
+    public void draw(Game game){
+        for (int i = 0; i < items.size(); i++) {
+            items.get(i).draw(game);
+        }
+    }
+    public void move(int boost) {
+        for (int i = 0; i < items.size(); i++) {
+            RoadObject obj = items.get(i);
+            obj.move(boost + obj.speed);
+        }
+    }
+
 }

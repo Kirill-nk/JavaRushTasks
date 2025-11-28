@@ -67,4 +67,7 @@ public class RoadObject extends GameObject {
     public static int getHeight(RoadObjectType type) {
         return getMatrix(type).length;
     }
+    public int getSpeed() {
+        return speed; // speed — это поле класса RoadObject
+    }
 }
