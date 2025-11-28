@@ -30,17 +30,20 @@ public class RoadManager {
         }
     }
 
-    public void draw(Game game){
+    public void draw(Game game) {
         for (int i = 0; i < items.size(); i++) {
             items.get(i).draw(game);
         }
     }
+
     public void move(int boost) {
         for (int i = 0; i < items.size(); i++) {
             RoadObject obj = items.get(i);
             obj.move(boost + obj.speed);
         }
+        deletePassedItems();
     }
+
     private boolean isThornExists() {
         for (int i = 0; i < items.size(); i++) {
             RoadObject item = items.get(i);
@@ -50,14 +53,24 @@ public class RoadManager {
         }
         return false;
     }
+
     private void generateThorn(Game game) {
         int value = game.getRandomNumber(100);
         if (value < 10 && !isThornExists()) {
             addRoadObject(RoadObjectType.THORN, game);
         }
     }
-    public void generateNewRoadObjects(Game game){
+
+    public void generateNewRoadObjects(Game game) {
         generateThorn(game);
     }
 
+    private void deletePassedItems() {
+        for (int i = items.size() - 1; i >= 0; i--) {
+            RoadObject object = items.get(i);
+            if (object.y >= RacerGame.HEIGHT) {
+                items.remove(i);
+            }
+        }
+    }
 }
