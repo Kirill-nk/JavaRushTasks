@@ -1,5 +1,7 @@
 package com.javarush.games.racer.road;
 
+import com.javarush.games.racer.GameObject;
+import com.javarush.games.racer.PlayerCar;
 import com.javarush.games.racer.RacerGame;
 import com.javarush.engine.cell.Game;
 
@@ -72,5 +74,14 @@ public class RoadManager {
                 items.remove(i);
             }
         }
+    }
+
+    public boolean checkCrush(PlayerCar playerCar) {
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).isCollision(playerCar)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
