@@ -84,12 +84,18 @@ public class RacerGame extends Game {
     }
 
     @Override
-    public void onKeyPress(Key key){
+    public void onKeyPress(Key key) {
         if (key == Key.LEFT) {
             player.setDirection(Direction.LEFT);
         }
         if (key == Key.RIGHT) {
             player.setDirection(Direction.RIGHT);
+        }
+        if (key == Key.SPACE && isGameStopped == true) {
+            createGame();
+        }
+        if (key == Key.UP) {
+            player.speed = 2;
         }
     }
 
@@ -101,9 +107,12 @@ public class RacerGame extends Game {
         if (key == Key.LEFT && player.getDirection() == Direction.LEFT) {
             player.setDirection(Direction.NONE);
         }
+        if (key == Key.UP){
+            player.speed = 1;
+        }
     }
 
-    private void gameOver(){
+    private void gameOver() {
         isGameStopped = true;
         showMessageDialog(Color.RED, "Game over", Color.AZURE, 12);
         stopTurnTimer();
