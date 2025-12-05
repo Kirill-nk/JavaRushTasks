@@ -15,9 +15,29 @@ public class Solution {
     }
 
     public static byte[] getNetAddress(byte[] ip, byte[] mask) {
-        return new byte[4];
+        byte[] netAdress = new byte[4];
+        for (int i = 0; i < 4; i++) {
+            netAdress[i] = (byte) (ip[i] & mask[i]);
+        }
+        return netAdress;
     }
 
     public static void print(byte[] bytes) {
+        for (int i = 0; i < bytes.length; i++) {
+            String bynary = String.format("%8s", Integer.toBinaryString(bytes[i] & 0xFF)).replace(' ', '0');
+            System.out.print(bynary);
+            if (i < bytes.length - 1){
+                System.out.print(" ");
+            }
+        }
+        System.out.println();
     }
 }
+
+/*
+Задача 2101 успешно прошла тестирование!
+Вы решили задачу лучше, чем 2% учеников.
+Вам удалось ее решить с 6 попытки.
+Среднее количество попыток для этой задачи 1.63.
+Всего эту задачу решили 18757 учеников.
+ */
