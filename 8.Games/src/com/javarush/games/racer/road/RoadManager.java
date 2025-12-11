@@ -14,6 +14,7 @@ public class RoadManager {
     private static final int FIRST_LANE_POSITION = 16;
     private static final int FOURTH_LANE_POSITION = 44;
     private List<RoadObject> items = new ArrayList<>();
+    private static final int PLAYER_CAR_DISTANCE = 12;
 
     private RoadObject createRoadObject(RoadObjectType type, int x, int y) {
         if (type == RoadObjectType.THORN) {
@@ -35,7 +36,7 @@ public class RoadManager {
         int x = game.getRandomNumber(FIRST_LANE_POSITION, FOURTH_LANE_POSITION);
         int y = -1 * RoadObject.getHeight(type);
         RoadObject newObject = createRoadObject(type, x, y);
-        if (newObject != null) {
+        if(newObject != null && isRoadSpaceFree(newObject)){
             items.add(newObject);
         }
     }
@@ -92,5 +93,15 @@ public class RoadManager {
             }
         }
         return false;
+    }
+
+    private boolean isRoadSpaceFree(RoadObject object){
+        for (int i = 0; i < items.size(); i++) {
+            RoadObject other = items.get(i);
+            if (other.isCollisionWithDistance(object,PLAYER_CAR_DISTANCE)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
