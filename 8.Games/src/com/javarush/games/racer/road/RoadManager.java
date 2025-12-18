@@ -16,6 +16,7 @@ public class RoadManager {
     private List<RoadObject> items = new ArrayList<>();
     private static final int PLAYER_CAR_DISTANCE = 12;
 
+
     private RoadObject createRoadObject(RoadObjectType type, int x, int y) {
         if (type == RoadObjectType.THORN) {
             return new Thorn(x, y);
